@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-28T15:06:53.411017+00:00",
+  "generated_at": "2026-09-28T15:12:14.141158+00:00",
   "proxy_count": 108,
   "group_names": [
     "Ⓜ️ 微软服务",
@@ -19,6 +19,6 @@
     "🛑 全球拦截",
     "🤖 OpenAI + Claude"
   ],
-  "rule_count": 10172,
+  "rule_count": 10171,
   "custom_rules_file": "config/rules.yaml"
 }
