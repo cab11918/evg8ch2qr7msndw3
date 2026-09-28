@@ -134,7 +134,7 @@
   @media (max-width:640px){
     .stats{grid-template-columns:repeat(2,1fr)}
     .tabs{margin-left:auto}
-    header .chip{display:none}
+    #chip-model{display:none}
   }
   @media (max-width:640px){
     main{padding:14px 12px 8px}
@@ -160,7 +160,7 @@
       <button type="button" data-tab="config">📊 配置</button>
     </div>
     <div class="spacer"></div>
-    <div class="chip" id="chip-ver" title="页面版本">v8</div>
+    <div class="chip" id="chip-ver" title="页面版本">v9</div>
     <div class="chip" id="chip-model" title="当前模型">未配置</div>
     <button class="icon-btn" id="btn-settings" title="设置">⚙</button>
   </header>
@@ -260,7 +260,7 @@
 "use strict";
 const $ = s => document.querySelector(s);
 const STORE_KEY = "self-host-rule-assistant-v1";
-const PAGE_VERSION = 8;
+const PAGE_VERSION = 9;
 const DEFAULTS = {
   ai_base_url: "https://open.bigmodel.cn/api/v1",
   ai_model: "glm-5.3",
