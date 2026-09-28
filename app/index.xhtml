@@ -1,9 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="robots" content="noindex,nofollow">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="robots" content="noindex,nofollow" />
 <title>订阅规则助手</title>
 <style>
   :root{
@@ -143,32 +144,32 @@
 
 <div class="overlay" id="ov-settings">
   <div class="sheet">
-    <div class="sheet-head"><h3>⚙ 设置</h3><button class="icon-btn" data-close>✕</button></div>
+    <div class="sheet-head"><h3>⚙ 设置</h3><button class="icon-btn" data-close="1">✕</button></div>
     <div class="sheet-body">
       <div class="field">
         <label>AI 接口地址（OpenAI 兼容）</label>
-        <input id="s-baseurl" placeholder="https://open.bigmodel.cn/api/paas/v4">
+        <input id="s-baseurl" placeholder="https://open.bigmodel.cn/api/paas/v4" />
         <div class="tip">更换提供商时改这里，例如任意兼容 /chat/completions 的网关地址。</div>
       </div>
       <div class="row2">
-        <div class="field"><label>模型</label><input id="s-model" placeholder="glm-5.3"></div>
-        <div class="field"><label>API Key</label><input id="s-key" type="password" placeholder="sk-... / 智谱 Key" autocomplete="off"></div>
+        <div class="field"><label>模型</label><input id="s-model" placeholder="glm-5.3" /></div>
+        <div class="field"><label>API Key</label><input id="s-key" type="password" placeholder="sk-... / 智谱 Key" autocomplete="off" /></div>
       </div>
       <div class="row2">
-        <div class="field"><label>GitHub 仓库</label><input id="s-repo" placeholder="cab11918/self-host-rule"></div>
-        <div class="field"><label>分支</label><input id="s-branch" placeholder="main"></div>
+        <div class="field"><label>GitHub 仓库</label><input id="s-repo" placeholder="cab11918/self-host-rule" /></div>
+        <div class="field"><label>分支</label><input id="s-branch" placeholder="main" /></div>
       </div>
       <div class="field">
         <label>GitHub Token</label>
-        <input id="s-token" type="password" placeholder="github_pat_... / ghp_..." autocomplete="off">
+        <input id="s-token" type="password" placeholder="github_pat_... / ghp_..." autocomplete="off" />
         <div class="tip">建议用细粒度 Token（仅本仓库、Contents 读写）：<a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">创建入口</a>。本机终端也可执行 <code>gh auth token</code> 获取现有 Token。</div>
       </div>
       <div class="field">
         <label>订阅 CDN 基址</label>
-        <input id="s-cdn" placeholder="https://cdn.jsdelivr.net/gh/...">
+        <input id="s-cdn" placeholder="https://cdn.jsdelivr.net/gh/..." />
         <div class="tip">页面从这里读取配置摘要 context.json，与订阅链接同源。</div>
       </div>
-      <label class="check"><input id="s-remember" type="checkbox" checked>在此浏览器记住设置（公共设备请取消）</label>
+      <label class="check"><input id="s-remember" type="checkbox" checked="checked" />在此浏览器记住设置（公共设备请取消）</label>
     </div>
     <div class="sheet-foot">
       <button class="btn pri" id="s-save">保存</button>
@@ -181,11 +182,11 @@
 
 <div class="overlay" id="ov-diff">
   <div class="sheet">
-    <div class="sheet-head"><h3>修改预览</h3><button class="icon-btn" data-close>✕</button></div>
+    <div class="sheet-head"><h3>修改预览</h3><button class="icon-btn" data-close="1">✕</button></div>
     <div class="sheet-body" id="diff-body"></div>
     <div class="sheet-foot">
       <button class="btn pri" id="diff-apply">应用并更新订阅</button>
-      <button class="btn ghost" data-close>取消</button>
+      <button class="btn ghost" data-close="1">取消</button>
     </div>
   </div>
 </div>
@@ -193,6 +194,7 @@
 <div class="toast" id="toast"></div>
 
 <script>
+//<![CDATA[
 "use strict";
 const $ = s => document.querySelector(s);
 const STORE_KEY = "self-host-rule-assistant-v1";
@@ -447,7 +449,7 @@ function showDiff(yaml){
       <div class="diff-head"><span>config/rules.yaml</span><span style="color:var(--ok)">+${add}</span><span style="color:var(--err)">-${del}</span></div>
       <div class="diff-body">${diff.map(d=>`<div class="dl ${d.t==="+"?"add":d.t==="-"?"del":"ctx"}">${d.t===" "?" ":d.t+" "}${esc(d.s)}</div>`).join("")}</div>
     </div>
-    <div class="field" style="margin-top:12px"><label>提交说明</label><input id="diff-msg" placeholder="ai: 修复分流规则"></div>`;
+    <div class="field" style="margin-top:12px"><label>提交说明</label><input id="diff-msg" placeholder="ai: 修复分流规则" /></div>`;
   state.pendingDiff = yaml;
   openOverlay("#ov-diff");
 }
@@ -522,6 +524,7 @@ $("#diff-apply").onclick = applyDiff;
 refreshChips();
 addHero();
 autosize();
+//]]>
 </script>
 </body>
 </html>
