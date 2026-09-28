@@ -83,8 +83,8 @@
   .sheet-body{padding:16px 18px;overflow-y:auto}
   .field{margin-bottom:14px}
   .field label{display:block;font-size:12.5px;color:var(--muted);margin-bottom:6px;font-weight:600}
-  .field input{width:100%;border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:10px;padding:10px 12px;font-size:13.5px;outline:none;font-family:inherit}
-  .field input:focus{border-color:var(--acc)}
+  .field input,.field select{width:100%;border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:10px;padding:10px 12px;font-size:13.5px;outline:none;font-family:inherit}
+  .field input:focus,.field select:focus{border-color:var(--acc)}
   .field .tip{font-size:11px;color:var(--dim);margin-top:5px;line-height:1.6}
   .field .tip a{color:var(--acc2)}
   .row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
@@ -148,10 +148,17 @@
     <div class="sheet-body">
       <div class="field">
         <label>AI 接口地址（OpenAI 兼容）</label>
-        <input id="s-baseurl" placeholder="https://open.bigmodel.cn/api/paas/v4" />
+        <input id="s-baseurl" placeholder="https://open.bigmodel.cn/api/v1" />
         <div class="tip">更换提供商时改这里，例如任意兼容 /chat/completions 的网关地址。</div>
       </div>
       <div class="row2">
+        <div class="field">
+          <label>接口协议</label>
+          <select id="s-proto">
+            <option value="responses">Responses（智谱推荐）</option>
+            <option value="chat">Chat Completions</option>
+          </select>
+        </div>
         <div class="field"><label>模型</label><input id="s-model" placeholder="glm-5.3" /></div>
         <div class="field"><label>API Key</label><input id="s-key" type="password" placeholder="sk-... / 智谱 Key" autocomplete="off" /></div>
       </div>
@@ -199,8 +206,9 @@
 const $ = s => document.querySelector(s);
 const STORE_KEY = "self-host-rule-assistant-v1";
 const DEFAULTS = {
-  ai_base_url: "https://open.bigmodel.cn/api/paas/v4",
+  ai_base_url: "https://open.bigmodel.cn/api/v1",
   ai_model: "glm-5.3",
+  ai_protocol: "responses",
   ai_api_key: "",
   gh_token: "",
   gh_repo: "cab11918/self-host-rule",
@@ -216,7 +224,13 @@ function loadSettings(){
   const s = { ...DEFAULTS };
   try {
     const raw = localStorage.getItem(STORE_KEY) || sessionStorage.getItem(STORE_KEY);
-    if (raw) Object.assign(s, JSON.parse(raw));
+    if (raw) {
+      Object.assign(s, JSON.parse(raw));
+      if (s.ai_base_url === "https://open.bigmodel.cn/api/paas/v4") {
+        s.ai_base_url = DEFAULTS.ai_base_url;
+        s.ai_protocol = "responses";
+      }
+    }
   } catch(e){}
   return s;
 }
@@ -227,7 +241,7 @@ function persistSettings(s){
 }
 function fillSettingsForm(){
   const s = loadSettings();
-  $("#s-baseurl").value = s.ai_base_url; $("#s-model").value = s.ai_model;
+  $("#s-baseurl").value = s.ai_base_url; $("#s-model").value = s.ai_model; $("#s-proto").value = s.ai_protocol || "responses";
   $("#s-key").value = s.ai_api_key; $("#s-repo").value = s.gh_repo;
   $("#s-branch").value = s.gh_branch; $("#s-token").value = s.gh_token;
   $("#s-cdn").value = s.cdn_base; $("#s-remember").checked = !!s.remember;
@@ -235,6 +249,7 @@ function fillSettingsForm(){
 function readSettingsForm(){
   const s = loadSettings();
   s.ai_base_url = $("#s-baseurl").value.trim().replace(/\/+$/,"") || DEFAULTS.ai_base_url;
+  s.ai_protocol = $("#s-proto").value || "responses";
   s.ai_model = $("#s-model").value.trim() || DEFAULTS.ai_model;
   s.ai_api_key = $("#s-key").value.trim();
   s.gh_repo = $("#s-repo").value.trim() || DEFAULTS.gh_repo;
@@ -294,6 +309,7 @@ async function ghApi(path, opts={}){
   if (!r.ok) {
     let msg = r.status+" "+r.statusText;
     try { const j = await r.json(); if (j.message) msg = j.message; } catch(e){}
+    if (r.status === 404) msg += "（Token 无权访问该仓库：细粒度 Token 需勾选 " + loadSettings().gh_repo + " 并给 Contents 读写权限）";
     throw new Error("GitHub: "+msg);
   }
   return r.json();
@@ -354,10 +370,15 @@ async function callAI(){
   const s = loadSettings();
   const sys = await buildSystemPrompt(state.currentRules);
   const history = state.messages.slice(-12).map(m => ({role: m.role, content: m.content}));
-  const r = await fetch(s.ai_base_url+"/chat/completions", {
+  const responses = (s.ai_protocol || "responses") === "responses";
+  const url = s.ai_base_url + (responses ? "/responses" : "/chat/completions");
+  const body = responses
+    ? { model: s.ai_model, instructions: sys, input: history }
+    : { model: s.ai_model, messages: [{role:"system",content:sys}, ...history], temperature: 0.2 };
+  const r = await fetch(url, {
     method: "POST",
     headers: { "Authorization": "Bearer "+s.ai_api_key, "Content-Type": "application/json" },
-    body: JSON.stringify({ model: s.ai_model, messages: [{role:"system",content:sys}, ...history], temperature: 0.2 }),
+    body: JSON.stringify(body),
   });
   if (!r.ok) {
     let msg = r.status+" "+r.statusText;
@@ -365,7 +386,15 @@ async function callAI(){
     throw new Error("AI 接口: "+msg);
   }
   const j = await r.json();
-  const c = j.choices && j.choices[0] && j.choices[0].message && j.choices[0].message.content;
+  let c = "";
+  if ((s.ai_protocol || "responses") === "responses" && Array.isArray(j.output)) {
+    const texts = [];
+    for (const item of j.output) for (const cc of (item.content || []))
+      if (cc.type === "output_text" && cc.text) texts.push(cc.text);
+    c = texts.join("\n").trim();
+  } else {
+    c = (j.choices && j.choices[0] && j.choices[0].message && j.choices[0].message.content) || "";
+  }
   if (!c) throw new Error("AI 返回了空内容");
   return c;
 }
@@ -498,10 +527,13 @@ $("#s-test-ai").onclick = async () => {
   if (!s.ai_api_key) return toast("请先填写 API Key");
   const btn = $("#s-test-ai"); btn.disabled = true; btn.textContent = "测试中…";
   try {
-    const r = await fetch(s.ai_base_url+"/chat/completions", {
+    const responses = (s.ai_protocol || "responses") === "responses";
+    const r = await fetch(s.ai_base_url + (responses ? "/responses" : "/chat/completions"), {
       method:"POST",
       headers:{ "Authorization":"Bearer "+s.ai_api_key, "Content-Type":"application/json" },
-      body: JSON.stringify({ model:s.ai_model, messages:[{role:"user",content:"回复：ok"}], max_tokens: 8 }),
+      body: JSON.stringify(responses
+        ? { model:s.ai_model, input:[{role:"user",content:"回复：ok"}] }
+        : { model:s.ai_model, messages:[{role:"user",content:"回复：ok"}], max_tokens: 8 }),
     });
     const j = await r.json().catch(()=>({}));
     if (r.ok) toast("AI 连接成功 ✓");
