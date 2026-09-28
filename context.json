@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-09-28T06:27:50.025776+00:00",
+  "proxy_count": 111,
+  "group_names": [
+    "Ⓜ️ 微软服务",
+    "♻️ 自动选择",
+    "⛔️ 广告拦截",
+    "🌍 国外媒体",
+    "🌏 国内媒体",
+    "🍎 苹果服务",
+    "🎥 NETFLIX",
+    "🎮 Steam",
+    "🎯 全球直连",
+    "🐟 漏网之鱼",
+    "💡 Gemini + Google",
+    "📲 电报信息",
+    "🔰 节点选择",
+    "🚫 运营劫持",
+    "🛑 全球拦截",
+    "🤖 OpenAI + Claude"
+  ],
+  "rule_count": 10164,
+  "custom_rules_file": "config/rules.yaml"
+}
