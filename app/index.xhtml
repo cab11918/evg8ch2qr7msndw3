@@ -147,7 +147,15 @@
     <div class="sheet-head"><h3>⚙ 设置</h3><button class="icon-btn" data-close="1">✕</button></div>
     <div class="sheet-body">
       <div class="field">
-        <label>AI 接口地址（OpenAI 兼容）</label>
+        <label>执行方式</label>
+        <select id="s-mode">
+          <option value="cloud">云端执行（推荐，免 CORS）</option>
+          <option value="direct">浏览器直连（其他提供商）</option>
+        </select>
+        <div class="tip">云端执行在 GitHub Actions 里调用 AI（Key 存仓库加密 Secret），浏览器无需 AI Key、不受 CORS 限制。</div>
+      </div>
+      <div class="field">
+        <label>AI 接口地址（仅浏览器直连模式）</label>
         <input id="s-baseurl" placeholder="https://open.bigmodel.cn/api/v1" />
         <div class="tip">更换提供商时改这里，例如任意兼容 /chat/completions 的网关地址。</div>
       </div>
@@ -209,6 +217,7 @@ const DEFAULTS = {
   ai_base_url: "https://open.bigmodel.cn/api/v1",
   ai_model: "glm-5.3",
   ai_protocol: "responses",
+  exec_mode: "cloud",
   ai_api_key: "",
   gh_token: "",
   gh_repo: "cab11918/self-host-rule",
@@ -241,6 +250,7 @@ function persistSettings(s){
 }
 function fillSettingsForm(){
   const s = loadSettings();
+  $("#s-mode").value = s.exec_mode || "cloud";
   $("#s-baseurl").value = s.ai_base_url; $("#s-model").value = s.ai_model; $("#s-proto").value = s.ai_protocol || "responses";
   $("#s-key").value = s.ai_api_key; $("#s-repo").value = s.gh_repo;
   $("#s-branch").value = s.gh_branch; $("#s-token").value = s.gh_token;
@@ -249,6 +259,7 @@ function fillSettingsForm(){
 function readSettingsForm(){
   const s = loadSettings();
   s.ai_base_url = $("#s-baseurl").value.trim().replace(/\/+$/,"") || DEFAULTS.ai_base_url;
+  s.exec_mode = $("#s-mode").value || "cloud";
   s.ai_protocol = $("#s-proto").value || "responses";
   s.ai_model = $("#s-model").value.trim() || DEFAULTS.ai_model;
   s.ai_api_key = $("#s-key").value.trim();
@@ -309,7 +320,7 @@ async function ghApi(path, opts={}){
   if (!r.ok) {
     let msg = r.status+" "+r.statusText;
     try { const j = await r.json(); if (j.message) msg = j.message; } catch(e){}
-    if (r.status === 404) msg += "（Token 无权访问该仓库：细粒度 Token 需勾选 " + loadSettings().gh_repo + " 并给 Contents 读写权限）";
+    if (r.status === 404) msg += "（Token 无权访问该仓库：细粒度 Token 需勾选 " + loadSettings().gh_repo + " 并给 Contents 读写权限。注意：Repository access（仓库访问范围）和 Permissions（权限）是两个独立设置）";
     throw new Error("GitHub: "+msg);
   }
   return r.json();
@@ -417,8 +428,8 @@ function addHero(){
   div.className = "hero";
   div.innerHTML = `<h2>👋 开始之前</h2>
     <ol>
-      <li>点右上角 <b>⚙</b> 打开设置，填入 <b>AI Key</b>（智谱默认已适配 glm-5.3）</li>
-      <li>填入 <b>GitHub Token</b>（用于提交规则修改，仅存本浏览器）</li>
+      <li>点右上角 <b>⚙</b> 打开设置，执行方式选 <b>云端执行</b>，填入 <b>GitHub Token</b>（AI 在云端运行，无需浏览器填 Key）</li>
+      <li>直接对话，例如「github.com 打不开」——云端 AI 会定位问题、修改规则并自动更新订阅</li>
       <li>直接对话，例如「github.com 打不开」或「公司内网 weoa.com 走直连」</li>
     </ol>
     <div class="go"><button class="btn pri" id="hero-open">打开设置</button></div>`;
@@ -432,16 +443,81 @@ function refreshChips(){
 function openOverlay(sel){ $(sel).classList.add("show"); }
 function closeOverlays(){ document.querySelectorAll(".overlay").forEach(o=>o.classList.remove("show")); }
 
+async function cloudSend(text){
+  const s = loadSettings();
+  const bubble = addMsg("ai", `<span class="think"><span class="d"></span><span class="d"></span><span class="d"></span> 已提交云端 AI… <span id="elapsed">0s</span></span>`);
+  const t0 = Date.now();
+  const tm = setInterval(()=>{ const e=$("#elapsed"); if(e) e.textContent=Math.round((Date.now()-t0)/1000)+"s"; }, 1000);
+  const setStatus = t => { bubble.innerHTML = `<span class="think"><span class="d"></span><span class="d"></span><span class="d"></span> ${t} <span id="elapsed">${Math.round((Date.now()-t0)/1000)}s</span></span>`; };
+  try {
+    let beforeId = 0;
+    try {
+      const rl = await ghApi(`/repos/${s.gh_repo}/actions/runs?per_page=5`);
+      beforeId = (rl.workflow_runs||[]).reduce((m,r)=>Math.max(m,r.id),0);
+    } catch(e){}
+    const history = state.messages.slice(0,-1).slice(-6).map(m=>({role:m.role, content:m.content}));
+    await ghApi(`/repos/${s.gh_repo}/actions/workflows/ai-assist.yml/dispatches`, {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({ref: s.gh_branch, inputs: {message: text, history: JSON.stringify(history)}}),
+    });
+    setStatus("已触发云端 AI，等待启动…");
+    let runId = 0;
+    for (let i=0;i<24 && !runId;i++){
+      await new Promise(r=>setTimeout(r,5000));
+      const rl = await ghApi(`/repos/${s.gh_repo}/actions/runs?per_page=10`);
+      const r = (rl.workflow_runs||[]).find(x=>x.id>beforeId && x.name==="AI rule assist");
+      if (r) runId = r.id;
+      else if (i%3===2) setStatus(`等待云端 AI 启动…`);
+    }
+    if (!runId) throw new Error("未能找到云端运行任务（请确认仓库里存在 ai-assist.yml 工作流）");
+    let done = false;
+    for (let i=0;i<60 && !done;i++){
+      await new Promise(r=>setTimeout(r,5000));
+      const run = await ghApi(`/repos/${s.gh_repo}/actions/runs/${runId}`);
+      done = run.status === "completed";
+      setStatus(`云端 AI 运行中（${run.status}）…`);
+    }
+    const runObj = await ghApi(`/repos/${s.gh_repo}/actions/runs/${runId}`);
+    if (runObj.conclusion !== "success") throw new Error("云端运行失败：" + (runObj.conclusion||"unknown"));
+    const f = await ghApi(`/repos/${s.gh_repo}/contents/dist/last-ai-result.json?ref=${encodeURIComponent(s.gh_branch)}&t=${Date.now()}`);
+    const res = JSON.parse(b64decode(f.content));
+    if (!res.ok) throw new Error("云端 AI 出错：" + (res.error||"未知错误"));
+    state.messages.push({role:"assistant", content: res.reply});
+    let html = fmtMd(res.reply);
+    if (res.changed && res.diff){
+      html += `<pre>${res.diff.split("\n").map(l =>
+        (l.startsWith("+") && !l.startsWith("+++")) ? `<span style="color:var(--ok)">${esc(l)}</span>`
+        : (l.startsWith("-") && !l.startsWith("---")) ? `<span style="color:var(--err)">${esc(l)}</span>`
+        : esc(l)).join("\n")}</pre>`;
+    }
+    html += `<div class="msg-acts"><span class="mini-btn ${res.changed?"ok":""}" style="cursor:default">${res.changed?"已提交规则修改并触发订阅更新":"未修改文件"}</span></div>`;
+    bubble.innerHTML = html;
+  } catch(e){
+    bubble.innerHTML = `<div class="err-box">${esc(e.message)}</div>`;
+  } finally {
+    clearInterval(tm);
+    state.busy = false; $("#btn-send").disabled = false;
+    $("main").scrollTop = $("main").scrollHeight;
+  }
+}
+
 async function send(){
   if (state.busy) return;
   const s = loadSettings();
   const text = $("#input").value.trim();
   if (!text) return;
-  if (!s.ai_api_key || !s.gh_token){ openOverlay("#ov-settings"); toast("请先在设置中填写 AI Key 和 GitHub Token"); return; }
+  const cloud = (s.exec_mode || "cloud") === "cloud";
+  if (!s.gh_token || (!cloud && !s.ai_api_key)){
+    openOverlay("#ov-settings");
+    toast(cloud ? "请先在设置中填写 GitHub Token" : "请先在设置中填写 AI Key 和 GitHub Token");
+    return;
+  }
   state.busy = true; $("#btn-send").disabled = true; $("#input").value="";
   autosize();
   addMsg("user", fmtMd(text));
   state.messages.push({role:"user", content:text});
+  if (cloud) return cloudSend(text);
 
   const think = addMsg("ai", `<span class="think"><span class="d"></span><span class="d"></span><span class="d"></span> 读取当前配置并思考中… <span id="elapsed">0s</span></span>`);
   const t0 = Date.now();
