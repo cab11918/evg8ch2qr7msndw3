@@ -323,7 +323,9 @@ async function ghApi(path, opts={}){
     if (r.status === 404) msg += "（Token 无权访问该仓库：细粒度 Token 需勾选 " + loadSettings().gh_repo + " 并给 Contents 读写权限。注意：Repository access（仓库访问范围）和 Permissions（权限）是两个独立设置）";
     throw new Error("GitHub: "+msg);
   }
-  return r.json();
+  if (r.status === 204) return null;
+  const text = await r.text();
+  return text ? JSON.parse(text) : null;
 }
 async function fetchRules(){
   const s = loadSettings();
@@ -595,7 +597,8 @@ $("#s-clear").onclick = () => {
 };
 $("#s-test-ai").onclick = async () => {
   const s = readSettingsForm(); persistSettings(s);
-  if (!s.ai_api_key) return toast("请先填写 API Key");
+  if ((s.exec_mode || "cloud") === "cloud") { toast("云端执行模式无需测试 AI：发送消息即自动运行"); return; }
+  if (!s.ai_api_key) return toast("请先填写 API Key（或在执行方式中改用云端执行）");
   const btn = $("#s-test-ai"); btn.disabled = true; btn.textContent = "测试中…";
   try {
     const responses = (s.ai_protocol || "responses") === "responses";
