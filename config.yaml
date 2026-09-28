@@ -1,0 +1,2091 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+ipv6: true
+external-controller: 127.0.0.1:9090
+dns:
+  enable: true
+  ipv6: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  nameserver:
+  - https://223.5.5.5/dns-query
+  - https://doh.pub/dns-query
+  default-nameserver:
+  - 223.5.5.5
+  - 119.29.29.29
+proxies:
+- name: A Series - HK 17
+  type: anytls
+  server: newazhk17.nwncd.com
+  port: 443
+  password: laVwQaS5xkjDc3u4
+  sni: newazhk17.nwncd.com
+  client-fingerprint: chrome
+  udp: true
+- name: A Series - HK 40
+  type: vless
+  server: newazhk40.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: www.hsu.edu.hk
+  skip-cert-verify: false
+  reality-opts:
+    public-key: KLbrCIgZ217-hpm3y_5vEU7EMVm-mn5LnreB4Tl8US8
+    short-id: a82d3b270f47e2b0
+  client-fingerprint: chrome
+- name: A Series - HK 41
+  type: vless
+  server: newazhk41.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: www.hsu.edu.hk
+  skip-cert-verify: false
+  reality-opts:
+    public-key: YPQiKLO97obPfyXTXlBOY1rYwEYTvUB1SFj1sjWTlUc
+    short-id: 2b9f1f910ad62957
+  client-fingerprint: chrome
+- name: A Series - HK 43
+  type: vless
+  server: newazhk43.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: www.hsu.edu.hk
+  skip-cert-verify: false
+  reality-opts:
+    public-key: YPQiKLO97obPfyXTXlBOY1rYwEYTvUB1SFj1sjWTlUc
+    short-id: 34a90f1bbb136fe2
+  client-fingerprint: chrome
+- name: A Series - HK 44
+  type: vless
+  server: newazhk44.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: www.hsu.edu.hk
+  skip-cert-verify: false
+  reality-opts:
+    public-key: uIp789od9Tw1rEVWpVTZPM8Fs5e5CtGao2_hLuY0BHg
+    short-id: 2f35f8447e5d3ec1
+  client-fingerprint: chrome
+- name: A Series - HK 45
+  type: vless
+  server: newazhk45.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: www.hsu.edu.hk
+  skip-cert-verify: false
+  reality-opts:
+    public-key: cZpUFOL0E9jnEXjQwQTiPZ_A0zHff8LTr8qkSA-RnBQ
+    short-id: 685822c0351ce4fc
+  client-fingerprint: chrome
+- name: A Series - HK 46
+  type: vless
+  server: newazhk46.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: www.hsu.edu.hk
+  skip-cert-verify: false
+  reality-opts:
+    public-key: SOor22Bb7d-beo7BJRkOYunDBPsgS9o7TVMJZvQh2jU
+    short-id: 2d095c86e1b16466
+  client-fingerprint: chrome
+- name: A Series - HK 47
+  type: vless
+  server: newazhk47.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: www.hsu.edu.hk
+  skip-cert-verify: false
+  reality-opts:
+    public-key: dkURzQ2gnVPa61DHkeii45KbsOtpAWH-jfzTHlf6nxc
+    short-id: ebbea9dac1286258
+  client-fingerprint: chrome
+- name: A Series - HK 48
+  type: vless
+  server: azhk48.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: www.hsu.edu.hk
+  skip-cert-verify: false
+  reality-opts:
+    public-key: gCBzOy7ST5AwxDXsc-t8qkgm9TivEDKsS8OC7swuhhY
+    short-id: 61335432cc41539b
+  client-fingerprint: chrome
+- name: A Series - HK 49
+  type: vless
+  server: azhk49.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: www.hsu.edu.hk
+  skip-cert-verify: false
+  reality-opts:
+    public-key: vjvTFs4Uyk1NGPNfuM6rWw3ipShaZDi9xF9zSOHTJjw
+    short-id: dd6aef721e166f28
+  client-fingerprint: chrome
+- name: A Series - HK 50
+  type: vless
+  server: azhk50.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: www.mtr.com.hk
+  skip-cert-verify: false
+  reality-opts:
+    public-key: h8WwErWzD2tTELxA2bw4nEIMZ8PCeL5GimHcPq_Gv0k
+    short-id: 3ada71f16c05f32a
+  client-fingerprint: chrome
+- name: A Series - HK 51
+  type: vless
+  server: azhk51.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: www.hksyu.edu
+  skip-cert-verify: false
+  reality-opts:
+    public-key: dipWgUgSvhUHRxjs7upOKKxtgIvAXjPJJtqzaiWczWg
+    short-id: 3d3eedb050c8afde
+  client-fingerprint: chrome
+- name: AC Series - HK 04
+  type: anytls
+  server: hkac04.nwncd.com
+  port: 443
+  password: laVwQaS5xkjDc3u4
+  sni: hkac04.nwncd.com
+  client-fingerprint: chrome
+  udp: true
+- name: C Series - HK 29
+  type: trojan
+  server: azhk29.nwncd.com
+  port: 713
+  password: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  sni: azhk29.nwncd.com
+  udp: true
+  network: grpc
+  grpc-opts:
+    grpc-service-name: mygrpc
+- name: California (美国) A09
+  type: vless
+  server: usa09.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: aosi.selfuse.icu
+  skip-cert-verify: false
+  reality-opts:
+    public-key: xiuonUfezotBv00goOWWkrK8IZ-ZeE5uw20tAmsKCAQ
+    short-id: 9e36ab55725bd702
+  client-fingerprint: chrome
+- name: 将在 10-12 恢复 (California (美国) A20)
+  type: vless
+  server: usa20.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: addons.mozilla.org
+  skip-cert-verify: false
+  reality-opts:
+    public-key: NJqL8WJKrZXQzJFOGtmxywyLnNLFF3wTg_AUxft_dQQ
+    short-id: 147f2c5fd8af7380
+  client-fingerprint: chrome
+- name: 将在 10-03 恢复 (California (美国) B09)
+  type: vless
+  server: usb09.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: addons.mozilla.org
+  skip-cert-verify: false
+  reality-opts:
+    public-key: tXVZqLhGUjYO7YLc18s8mwWw0ghCS91Dz_wexK8Kp2o
+    short-id: 92a366ae8ff7927a
+  client-fingerprint: chrome
+- name: 将在 10-03 恢复 (California (美国) B09 (IPv6))
+  type: vless
+  server: usb09-ipv6.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: addons.mozilla.org
+  skip-cert-verify: false
+  reality-opts:
+    public-key: tXVZqLhGUjYO7YLc18s8mwWw0ghCS91Dz_wexK8Kp2o
+    short-id: 92a366ae8ff7927a
+  client-fingerprint: chrome
+- name: 将在 10-03 恢复 (California (美国) B10)
+  type: vless
+  server: usb10.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: addons.mozilla.org
+  skip-cert-verify: false
+  reality-opts:
+    public-key: HKf6MnsbZcwuFfJ7MZU2Wbqg24aH8v1cZfgVUsNJsCk
+    short-id: 9b29b7e52b4c84e3
+  client-fingerprint: chrome
+- name: 将在 10-03 恢复 (California (美国) B10 (IPv6))
+  type: vless
+  server: usb10-ipv6.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: addons.mozilla.org
+  skip-cert-verify: false
+  reality-opts:
+    public-key: HKf6MnsbZcwuFfJ7MZU2Wbqg24aH8v1cZfgVUsNJsCk
+    short-id: 9b29b7e52b4c84e3
+  client-fingerprint: chrome
+- name: 将在 10-03 恢复 (California (美国) B11)
+  type: vless
+  server: usb11.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: warpdotdev-warp.nwncd.com
+  skip-cert-verify: false
+  reality-opts:
+    public-key: JHoYDGgbJsZCHC8qJTdOUJgKkXEqwn54PEg5j623wSc
+    short-id: c4177821b4ec1a15
+  client-fingerprint: chrome
+- name: 将在 10-03 恢复 (California (美国) B11 (IPv6))
+  type: vless
+  server: usb11-ipv6.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: warpdotdev-warp.nwncd.com
+  skip-cert-verify: false
+  reality-opts:
+    public-key: JHoYDGgbJsZCHC8qJTdOUJgKkXEqwn54PEg5j623wSc
+    short-id: c4177821b4ec1a15
+  client-fingerprint: chrome
+- name: California (美国) B12
+  type: vless
+  server: usb12.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: addons.mozilla.org
+  skip-cert-verify: false
+  reality-opts:
+    public-key: FytQzcR1FTpF3vb6ba2zG-UWcVaaAc-3oTDh57AyDwk
+    short-id: 88ca1bb905ddde0a
+  client-fingerprint: chrome
+- name: California (美国) B12 (IPv6)
+  type: vless
+  server: usb12-ipv6.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: addons.mozilla.org
+  skip-cert-verify: false
+  reality-opts:
+    public-key: FytQzcR1FTpF3vb6ba2zG-UWcVaaAc-3oTDh57AyDwk
+    short-id: 88ca1bb905ddde0a
+  client-fingerprint: chrome
+- name: California (美国) B13
+  type: vless
+  server: usb13.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: warpdotdev-warp.nwncd.com
+  skip-cert-verify: false
+  reality-opts:
+    public-key: F_NKpyxO8pserXqT1RPl_lwHvtXqqpjdP_he-MDMgWg
+    short-id: 5740815b7f0f2d69
+  client-fingerprint: chrome
+- name: California (美国) B13 (IPv6)
+  type: vless
+  server: usb13-ipv6.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: warpdotdev-warp.nwncd.com
+  skip-cert-verify: false
+  reality-opts:
+    public-key: F_NKpyxO8pserXqT1RPl_lwHvtXqqpjdP_he-MDMgWg
+    short-id: 5740815b7f0f2d69
+  client-fingerprint: chrome
+- name: California (美国) E05
+  type: vless
+  server: use05.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: tldev-dorso.nwncd.com
+  skip-cert-verify: false
+  reality-opts:
+    public-key: TO1goiQ7rNvN1AELFtyUFhk1D8xibX63opdKMLKRJno
+    short-id: 00540b4ab0ed15b7
+  client-fingerprint: chrome
+- name: California (美国) E06
+  type: vless
+  server: use06.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: www.wvu.edu
+  skip-cert-verify: false
+  reality-opts:
+    public-key: 3A8ErnGGxMUG0DDzQ-LTt1f2ZI_H8gUn-7DUXPVxaDg
+    short-id: 388524e43e293179
+  client-fingerprint: chrome
+- name: California (美国) G05
+  type: vless
+  server: usg05.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: sisong-unityandroidhotupdate.nwncd.com
+  skip-cert-verify: false
+  reality-opts:
+    public-key: yI5sbSOwprh9LCV0jBp57Jcdh-hEAJy1OeIpTAnoiFQ
+    short-id: 14b87663b64b3728
+  client-fingerprint: chrome
+- name: California (美国) G05 (IPv6)
+  type: vless
+  server: usg05-ipv6.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: sisong-unityandroidhotupdate.nwncd.com
+  skip-cert-verify: false
+  reality-opts:
+    public-key: yI5sbSOwprh9LCV0jBp57Jcdh-hEAJy1OeIpTAnoiFQ
+    short-id: 14b87663b64b3728
+  client-fingerprint: chrome
+- name: California (美国) G06
+  type: anytls
+  server: usg06.nwncd.com
+  port: 8443
+  password: laVwQaS5xkjDc3u4
+  sni: usg06.nwncd.com
+  client-fingerprint: chrome
+  udp: true
+- name: California (美国) G06 (IPv6)
+  type: anytls
+  server: usg06-ipv6.nwncd.com
+  port: 8443
+  password: laVwQaS5xkjDc3u4
+  sni: usg06.nwncd.com
+  client-fingerprint: chrome
+  udp: true
+- name: California (美国) H01
+  type: anytls
+  server: ush01.nwncd.com
+  port: 443
+  password: laVwQaS5xkjDc3u4
+  sni: ush01.nwncd.com
+  client-fingerprint: chrome
+  udp: true
+- name: California (美国) H04
+  type: vless
+  server: ush04.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: lg.lax1.plus.flawlessnode.com
+  skip-cert-verify: false
+  reality-opts:
+    public-key: QA3sVFR2ZdH1uVsgbSbUqpMt0fCXhsqRX1zy_1rTpV8
+    short-id: fd047f6a605789cb
+  client-fingerprint: chrome
+- name: California (美国) H10
+  type: vless
+  server: ush10.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: lg.lax1.plus.flawlessnode.com
+  skip-cert-verify: false
+  reality-opts:
+    public-key: 3jFhcTDJtEiy0ScP-9Qk5BMv4WHu10hyodfLtgRhNhw
+    short-id: 0d2c5f6704ececbd
+  client-fingerprint: chrome
+- name: China Taiwan A01
+  type: anytls
+  server: twa01.nwncd.com
+  port: 443
+  password: laVwQaS5xkjDc3u4
+  sni: twa01.nwncd.com
+  client-fingerprint: chrome
+  udp: true
+- name: China Taiwan A01 (IPv6)
+  type: anytls
+  server: twa01-ipv6.nwncd.com
+  port: 443
+  password: laVwQaS5xkjDc3u4
+  sni: twa01.nwncd.com
+  client-fingerprint: chrome
+  udp: true
+- name: China Taiwan B01
+  type: anytls
+  server: twb01.nwncd.com
+  port: 8443
+  password: laVwQaS5xkjDc3u4
+  sni: twb01.nwncd.com
+  client-fingerprint: chrome
+  udp: true
+- name: China Taiwan B01 (IPv6)
+  type: anytls
+  server: twb01-ipv6.nwncd.com
+  port: 8443
+  password: laVwQaS5xkjDc3u4
+  sni: twb01.nwncd.com
+  client-fingerprint: chrome
+  udp: true
+- name: China Taiwan B02
+  type: vless
+  server: twb02.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: www.ncu.edu.tw
+  skip-cert-verify: false
+  reality-opts:
+    public-key: DtDRl5uBVO1O-rNh4jZXOH0GjSM-uus9k4C218ACq0g
+    short-id: c11cf1793aa87c6d
+  client-fingerprint: chrome
+- name: China Taiwan B02 (IPv6)
+  type: vless
+  server: twb02-ipv6.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: www.ncu.edu.tw
+  skip-cert-verify: false
+  reality-opts:
+    public-key: DtDRl5uBVO1O-rNh4jZXOH0GjSM-uus9k4C218ACq0g
+    short-id: c11cf1793aa87c6d
+  client-fingerprint: chrome
+- name: China Taiwan C01
+  type: vless
+  server: twc01.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: addons.mozilla.org
+  skip-cert-verify: false
+  reality-opts:
+    public-key: slCwU43XWaY9DhwlACGs_whHIak6qNI2FyxpWKLyC3U
+    short-id: 285fdc69077e805e
+  client-fingerprint: chrome
+- name: China Taiwan C01 (IPv6)
+  type: vless
+  server: twc01-ipv6.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: addons.mozilla.org
+  skip-cert-verify: false
+  reality-opts:
+    public-key: slCwU43XWaY9DhwlACGs_whHIak6qNI2FyxpWKLyC3U
+    short-id: 285fdc69077e805e
+  client-fingerprint: chrome
+- name: China Taiwan C02
+  type: vless
+  server: twc02.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: addons.mozilla.org
+  skip-cert-verify: false
+  reality-opts:
+    public-key: GhjDU5Dqacn0axV9Qogkog28xjEOATL5dURb1jUClkU
+    short-id: c75af2e3bb7ad404
+  client-fingerprint: chrome
+- name: China Taiwan C02 (IPv6)
+  type: vless
+  server: twc02-ipv6.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: addons.mozilla.org
+  skip-cert-verify: false
+  reality-opts:
+    public-key: GhjDU5Dqacn0axV9Qogkog28xjEOATL5dURb1jUClkU
+    short-id: c75af2e3bb7ad404
+  client-fingerprint: chrome
+- name: China Taiwan D01
+  type: anytls
+  server: twd01.nwncd.com
+  port: 443
+  password: laVwQaS5xkjDc3u4
+  sni: twd01.nwncd.com
+  client-fingerprint: chrome
+  udp: true
+- name: China Taiwan D01 (IPv6)
+  type: anytls
+  server: twd01-ipv6.nwncd.com
+  port: 443
+  password: laVwQaS5xkjDc3u4
+  sni: twd01.nwncd.com
+  client-fingerprint: chrome
+  udp: true
+- name: China Taiwan D02
+  type: anytls
+  server: twd02.nwncd.com
+  port: 443
+  password: laVwQaS5xkjDc3u4
+  sni: twd02.nwncd.com
+  client-fingerprint: chrome
+  udp: true
+- name: China Taiwan D02 (IPv6)
+  type: anytls
+  server: twd02-ipv6.nwncd.com
+  port: 443
+  password: laVwQaS5xkjDc3u4
+  sni: twd02.nwncd.com
+  client-fingerprint: chrome
+  udp: true
+- name: China Taiwan E03
+  type: vless
+  server: twe03.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: blueboy785-nas.synology.me
+  skip-cert-verify: false
+  reality-opts:
+    public-key: WaUD5xc_5v784vAONkLPh22t834Z1DaMRxZc_qUf7iA
+    short-id: 779988a7fcb9790a
+  client-fingerprint: chrome
+- name: China Taiwan E03 (IPv6)
+  type: vless
+  server: twe03-ipv6.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: blueboy785-nas.synology.me
+  skip-cert-verify: false
+  reality-opts:
+    public-key: WaUD5xc_5v784vAONkLPh22t834Z1DaMRxZc_qUf7iA
+    short-id: 779988a7fcb9790a
+  client-fingerprint: chrome
+- name: D Series - HK 01【故障】
+  type: vless
+  server: nodehkd01.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: www.cityu.edu.hk
+  skip-cert-verify: false
+  reality-opts:
+    public-key: zdWxb3Te_52N6HQfXDAh1vX9ytoNliORfvTF5OPESh0
+    short-id: d27aba52d12d7c5d
+  client-fingerprint: chrome
+- name: hktest03
+  type: vless
+  server: hktest03.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: www.mtr.com.hk
+  skip-cert-verify: false
+  reality-opts:
+    public-key: wcPdO7vLuyl09T7caPDKdigJVCavhU-d2DP2ihTumh4
+    short-id: a0678c8fad913064
+  client-fingerprint: chrome
+- name: 将在 10-01 恢复 (Hong Kong C01)
+  type: vless
+  server: hkc01.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: www.cityu.edu.hk
+  skip-cert-verify: false
+  reality-opts:
+    public-key: uxk_b1c0CXi0mzpvhOorRrg2OjiwV4N4UvBZyV_nIS0
+    short-id: 71753f5e0d151ac2
+  client-fingerprint: chrome
+- name: 将在 10-01 恢复 (Hong Kong C01 (IPv6))
+  type: vless
+  server: hkc01-ipv6.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: www.cityu.edu.hk
+  skip-cert-verify: false
+  reality-opts:
+    public-key: uxk_b1c0CXi0mzpvhOorRrg2OjiwV4N4UvBZyV_nIS0
+    short-id: 71753f5e0d151ac2
+  client-fingerprint: chrome
+- name: Japan A02
+  type: anytls
+  server: jpa02.nwncd.com
+  port: 443
+  password: laVwQaS5xkjDc3u4
+  sni: jpa02.nwncd.com
+  client-fingerprint: chrome
+  udp: true
+- name: Japan B01【故障】
+  type: vless
+  server: jpb01.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: www.lc335a.gr.jp
+  skip-cert-verify: false
+  reality-opts:
+    public-key: qh0HBQmSSC6TGxwM4euJuYUvW7lE1VjdfJ-Ds9h96GQ
+    short-id: ee50cfcc4323e735
+  client-fingerprint: chrome
+- name: Japan C01【故障】
+  type: vless
+  server: jpc01.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: hexii.org
+  skip-cert-verify: false
+  reality-opts:
+    public-key: 0ZTdFJGgnJCBeNfGL4-yw0rrbPgOzKCZKBtBX7ZjHz8
+    short-id: 01e6b85dbb73b665
+  client-fingerprint: chrome
+- name: Japan C01【故障】 (IPv6)
+  type: vless
+  server: jpc01-ipv6.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: hexii.org
+  skip-cert-verify: false
+  reality-opts:
+    public-key: 0ZTdFJGgnJCBeNfGL4-yw0rrbPgOzKCZKBtBX7ZjHz8
+    short-id: 01e6b85dbb73b665
+  client-fingerprint: chrome
+- name: Japan D01
+  type: trojan
+  server: jpd01.nwncd.com
+  port: 35230
+  password: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  sni: jpd01.nwncd.com
+  udp: true
+  network: grpc
+  grpc-opts:
+    grpc-service-name: mygrpc
+- name: Japan D01 (IPv6)
+  type: trojan
+  server: jpd01-ipv6.nwncd.com
+  port: 35230
+  password: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  sni: jpd01.nwncd.com
+  udp: true
+  network: grpc
+  grpc-opts:
+    grpc-service-name: mygrpc
+- name: Japan E01
+  type: vless
+  server: jpe01.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: www.lc335a.gr.jp
+  skip-cert-verify: false
+  reality-opts:
+    public-key: IGdV-Ki7JH-AEEC1oCEMmTtN5oVLXzpPE0c0gRXQKms
+    short-id: 1faf7c598917e01c
+  client-fingerprint: chrome
+- name: Japan E01 (IPv6)
+  type: vless
+  server: jpe01-ipv6.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: www.lc335a.gr.jp
+  skip-cert-verify: false
+  reality-opts:
+    public-key: IGdV-Ki7JH-AEEC1oCEMmTtN5oVLXzpPE0c0gRXQKms
+    short-id: 1faf7c598917e01c
+  client-fingerprint: chrome
+- name: Japan F02
+  type: anytls
+  server: jpf02.nwncd.com
+  port: 443
+  password: laVwQaS5xkjDc3u4
+  sni: jpf02.nwncd.com
+  client-fingerprint: chrome
+  udp: true
+- name: Japan F02 (IPv6)
+  type: anytls
+  server: jpf02-ipv6.nwncd.com
+  port: 443
+  password: laVwQaS5xkjDc3u4
+  sni: jpf02.nwncd.com
+  client-fingerprint: chrome
+  udp: true
+- name: Japan M01【故障】
+  type: vless
+  server: jpm01.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: www.lc335a.gr.jp
+  skip-cert-verify: false
+  reality-opts:
+    public-key: m6yp0s7JslbRrrYjw0kHehpskMmDG88IHmaV3LxGgG0
+    short-id: 5d65ffa79ad31c03
+  client-fingerprint: chrome
+- name: Russia B02【故障】
+  type: vless
+  server: rub02.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: msu.ru
+  skip-cert-verify: false
+  reality-opts:
+    public-key: fu_PpIuMxYIWjgaTjGg-er00oBnFp0CXr22-0hH72FQ
+    short-id: 7dc502cffda808c1
+  client-fingerprint: chrome
+- name: Russia B02【故障】 (IPv6)
+  type: vless
+  server: rub02-ipv6.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: msu.ru
+  skip-cert-verify: false
+  reality-opts:
+    public-key: fu_PpIuMxYIWjgaTjGg-er00oBnFp0CXr22-0hH72FQ
+    short-id: 7dc502cffda808c1
+  client-fingerprint: chrome
+- name: Z 土耳其01 (香港中转)
+  type: trojan
+  server: newazhk46.nwncd.com
+  port: 50091
+  password: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  sni: tur.nwncd.com
+  udp: true
+  network: grpc
+  grpc-opts:
+    grpc-service-name: mygrpc
+- name: Z 土耳其01 (台湾中转)
+  type: trojan
+  server: optimize-tw-relay.nwncd.com
+  port: 50091
+  password: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  sni: tur.nwncd.com
+  udp: true
+  network: grpc
+  grpc-opts:
+    grpc-service-name: mygrpc
+- name: Z 土耳其02 (香港中转)
+  type: trojan
+  server: newazhk46.nwncd.com
+  port: 50092
+  password: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  sni: tur2.nwncd.com
+  udp: true
+  network: grpc
+  grpc-opts:
+    grpc-service-name: mygrpc
+- name: Z 土耳其02 (台湾中转)
+  type: trojan
+  server: optimize-tw-relay.nwncd.com
+  port: 50092
+  password: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  sni: tur2.nwncd.com
+  udp: true
+  network: grpc
+  grpc-opts:
+    grpc-service-name: mygrpc
+- name: Z 德国A01
+  type: vless
+  server: dea01.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: www.tum.de
+  skip-cert-verify: false
+  reality-opts:
+    public-key: wcPdO7vLuyl09T7caPDKdigJVCavhU-d2DP2ihTumh4
+    short-id: 5e21ea42c0cea033
+  client-fingerprint: chrome
+- name: Z 德国B01
+  type: vless
+  server: deb01.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: tutuapp.com
+  skip-cert-verify: false
+  reality-opts:
+    public-key: wcPdO7vLuyl09T7caPDKdigJVCavhU-d2DP2ihTumh4
+    short-id: 5e21ea42c0cea033
+  client-fingerprint: chrome
+- name: 将在 10-01 恢复 (Z 意大利A01 (IPv6))
+  type: trojan
+  server: ita01-ipv6.nwncd.com
+  port: 35322
+  password: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  sni: ita01.nwncd.com
+  udp: true
+  network: grpc
+  grpc-opts:
+    grpc-service-name: mygrpc
+- name: Z 意大利A02
+  type: vless
+  server: ita02.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: www.unina.it
+  skip-cert-verify: false
+  reality-opts:
+    public-key: PiGBZboC9WgtwjIET6EVvrchq5gGcxeU_Jb5BN10rmg
+    short-id: 0bb0d7173275f469
+  client-fingerprint: chrome
+- name: Z 意大利A02 (IPv6)
+  type: vless
+  server: ita02-ipv6.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: www.unina.it
+  skip-cert-verify: false
+  reality-opts:
+    public-key: PiGBZboC9WgtwjIET6EVvrchq5gGcxeU_Jb5BN10rmg
+    short-id: 0bb0d7173275f469
+  client-fingerprint: chrome
+- name: Z 新加坡A02
+  type: vless
+  server: sga02.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: www.nus.edu.sg
+  skip-cert-verify: false
+  reality-opts:
+    public-key: pTdxZcMK82pJKcTcdn3TCWnTNBY013tkh4A9usOzMjk
+    short-id: fa72588c1ac29406
+  client-fingerprint: chrome
+- name: Z 新加坡A02 (香港中转)
+  type: vless
+  server: optimize-hk-relay.nwncd.com
+  port: '50042'
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: www.nus.edu.sg
+  skip-cert-verify: false
+  reality-opts:
+    public-key: pTdxZcMK82pJKcTcdn3TCWnTNBY013tkh4A9usOzMjk
+    short-id: fa72588c1ac29406
+  client-fingerprint: chrome
+- name: Z 新加坡A02 (IPv6)
+  type: vless
+  server: sga02-ipv6.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: www.nus.edu.sg
+  skip-cert-verify: false
+  reality-opts:
+    public-key: pTdxZcMK82pJKcTcdn3TCWnTNBY013tkh4A9usOzMjk
+    short-id: fa72588c1ac29406
+  client-fingerprint: chrome
+- name: Z 新加坡A04
+  type: vless
+  server: sga04.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: www.smu.edu.sg
+  skip-cert-verify: false
+  reality-opts:
+    public-key: DojEZf7jejU4hR47gKxb902WKK7bK-Dpz3L02kB-JH0
+    short-id: 0c561fd111e05351
+  client-fingerprint: chrome
+- name: Z 新加坡A04 (IPv6)
+  type: vless
+  server: sga04-ipv6.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: www.smu.edu.sg
+  skip-cert-verify: false
+  reality-opts:
+    public-key: DojEZf7jejU4hR47gKxb902WKK7bK-Dpz3L02kB-JH0
+    short-id: 0c561fd111e05351
+  client-fingerprint: chrome
+- name: 将在 10-01 恢复 (Z 澳大利亚A01)
+  type: vless
+  server: aua01.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: www.sydney.edu.au
+  skip-cert-verify: false
+  reality-opts:
+    public-key: z6y1rdSOlReq1JA5ruOtXwnI0OgGDoHf5rlGpNVBZlw
+    short-id: 59ca2bd2257f4127
+  client-fingerprint: chrome
+- name: 将在 10-01 恢复 (Z 澳大利亚A01 (台湾中转))
+  type: vless
+  server: optimize-tw-relay.nwncd.com
+  port: '50001'
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: www.sydney.edu.au
+  skip-cert-verify: false
+  reality-opts:
+    public-key: z6y1rdSOlReq1JA5ruOtXwnI0OgGDoHf5rlGpNVBZlw
+    short-id: 59ca2bd2257f4127
+  client-fingerprint: chrome
+- name: 将在 10-01 恢复 (Z 澳大利亚A01 (IPv6))
+  type: vless
+  server: aua01-ipv6.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: www.sydney.edu.au
+  skip-cert-verify: false
+  reality-opts:
+    public-key: z6y1rdSOlReq1JA5ruOtXwnI0OgGDoHf5rlGpNVBZlw
+    short-id: 59ca2bd2257f4127
+  client-fingerprint: chrome
+- name: Z 澳大利亚A02
+  type: vless
+  server: aua02.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: www.sydney.edu.au
+  skip-cert-verify: false
+  reality-opts:
+    public-key: KMd9iUihWwdwxPUOaJWhCau2Mk50GmExIAHup4waxVg
+    short-id: 98425c75e5bc7fd9
+  client-fingerprint: chrome
+- name: Z 澳大利亚A02 (台湾中转)
+  type: vless
+  server: optimize-tw-relay.nwncd.com
+  port: '50002'
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: www.sydney.edu.au
+  skip-cert-verify: false
+  reality-opts:
+    public-key: KMd9iUihWwdwxPUOaJWhCau2Mk50GmExIAHup4waxVg
+    short-id: 98425c75e5bc7fd9
+  client-fingerprint: chrome
+- name: Z 澳大利亚A02 (IPv6)
+  type: vless
+  server: aua02-ipv6.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: www.sydney.edu.au
+  skip-cert-verify: false
+  reality-opts:
+    public-key: KMd9iUihWwdwxPUOaJWhCau2Mk50GmExIAHup4waxVg
+    short-id: 98425c75e5bc7fd9
+  client-fingerprint: chrome
+- name: Z 澳大利亚B01 (香港中转)
+  type: vless
+  server: optimize-hk-relay.nwncd.com
+  port: '50011'
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: www.sydney.edu.au
+  skip-cert-verify: false
+  reality-opts:
+    public-key: 7f6j5ahpML_OzWx7N3Ijrmz5otsNvCSmMWRuGkHbpD4
+    short-id: 882db48279e05da3
+  client-fingerprint: chrome
+- name: Z 澳大利亚B01 (台湾中转)
+  type: vless
+  server: optimize-tw-relay.nwncd.com
+  port: '50011'
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: www.sydney.edu.au
+  skip-cert-verify: false
+  reality-opts:
+    public-key: 7f6j5ahpML_OzWx7N3Ijrmz5otsNvCSmMWRuGkHbpD4
+    short-id: 882db48279e05da3
+  client-fingerprint: chrome
+- name: 将在 10-01 恢复 (Z 英国 A01)
+  type: trojan
+  server: uka01.nwncd.com
+  port: 461
+  password: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  sni: uka01.nwncd.com
+  udp: true
+  network: grpc
+  grpc-opts:
+    grpc-service-name: mygrpc
+- name: 将在 10-01 恢复 (Z 英国 A01 (香港中转))
+  type: trojan
+  server: optimize-hk-relay.nwncd.com
+  port: 50081
+  password: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  sni: uka01.nwncd.com
+  udp: true
+  network: grpc
+  grpc-opts:
+    grpc-service-name: mygrpc
+- name: 将在 10-01 恢复 (Z 英国 A02)
+  type: trojan
+  server: uka02.nwncd.com
+  port: 23357
+  password: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  sni: uka02.nwncd.com
+  udp: true
+  network: grpc
+  grpc-opts:
+    grpc-service-name: mygrpc
+- name: 将在 10-01 恢复 (Z 英国 A02 (香港中转))
+  type: trojan
+  server: optimize-hk-relay.nwncd.com
+  port: 35101
+  password: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  sni: uka02.nwncd.com
+  udp: true
+  network: grpc
+  grpc-opts:
+    grpc-service-name: mygrpc
+- name: Z 英国 A04
+  type: anytls
+  server: uka04.nwncd.com
+  port: 443
+  password: laVwQaS5xkjDc3u4
+  sni: uka04.nwncd.com
+  client-fingerprint: chrome
+  udp: true
+- name: Z 英国 B01【故障】
+  type: anytls
+  server: ukb01.nwncd.com
+  port: 443
+  password: laVwQaS5xkjDc3u4
+  sni: ukb01.nwncd.com
+  client-fingerprint: chrome
+  udp: true
+- name: Z 英国 C01【故障】
+  type: vless
+  server: ukc01.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  tls: true
+  udp: true
+  network: xhttp
+  servername: console.kamatera.com
+  skip-cert-verify: false
+  reality-opts:
+    public-key: CMCF9THy7tIsekqovAIgC9DZxyznamPn8iUKa8g5fG0
+    short-id: 93871e238e55e34a
+  client-fingerprint: chrome
+  xhttp-opts:
+    path: /amdyes
+    mode: auto
+    x-padding-bytes: 100-1000
+    sc-max-each-post-bytes: 1000000
+- name: Z 英国 C02【故障】
+  type: anytls
+  server: ukc02.nwncd.com
+  port: 443
+  password: laVwQaS5xkjDc3u4
+  sni: ukc02.nwncd.com
+  client-fingerprint: chrome
+  udp: true
+- name: Z 英国 C03【故障】
+  type: anytls
+  server: ukc03.nwncd.com
+  port: 443
+  password: laVwQaS5xkjDc3u4
+  sni: ukc03.nwncd.com
+  client-fingerprint: chrome
+  udp: true
+- name: Z 英国 C04【故障】
+  type: anytls
+  server: ukc04.nwncd.com
+  port: 443
+  password: laVwQaS5xkjDc3u4
+  sni: ukc04.nwncd.com
+  client-fingerprint: chrome
+  udp: true
+- name: Z 菲律宾 A01【故障】
+  type: vless
+  server: pha01.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: www.ateneo.edu
+  skip-cert-verify: false
+  reality-opts:
+    public-key: spjJJHsOMo5mBb1IWtBEoQMHj9qL6U_OzJ2RyaKMdS8
+    short-id: baba966b48b35562
+  client-fingerprint: chrome
+- name: Z 越南A01
+  type: trojan
+  server: vna01.nwncd.com
+  port: 461
+  password: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  sni: vna01.nwncd.com
+  udp: true
+  network: grpc
+  grpc-opts:
+    grpc-service-name: mygrpc
+- name: Z 越南A01 (香港中转)
+  type: trojan
+  server: optimize-hk-relay.nwncd.com
+  port: 30501
+  password: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  sni: vna01.nwncd.com
+  udp: true
+  network: grpc
+  grpc-opts:
+    grpc-service-name: mygrpc
+- name: Z 越南A01 (台湾中转)
+  type: trojan
+  server: optimize-tw-relay.nwncd.com
+  port: 30501
+  password: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  sni: vna01.nwncd.com
+  udp: true
+  network: grpc
+  grpc-opts:
+    grpc-service-name: mygrpc
+- name: 将在 10-04 恢复 (Z 韩国B04)
+  type: vless
+  server: krb04.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: www.skku.edu
+  skip-cert-verify: false
+  reality-opts:
+    public-key: wcPdO7vLuyl09T7caPDKdigJVCavhU-d2DP2ihTumh4
+    short-id: a0678c8fad913064
+  client-fingerprint: chrome
+- name: Z 马来西亚A01
+  type: trojan
+  server: mya01.nwncd.com
+  port: 35332
+  password: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  sni: mya01.nwncd.com
+  udp: true
+  network: grpc
+  grpc-opts:
+    grpc-service-name: mygrpc
+- name: Z 马来西亚A01 (香港中转)
+  type: trojan
+  server: optimize-hk-relay.nwncd.com
+  port: 50051
+  password: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  sni: mya01.nwncd.com
+  udp: true
+  network: grpc
+  grpc-opts:
+    grpc-service-name: mygrpc
+- name: Z 马来西亚A01 (IPv6)
+  type: trojan
+  server: mya01-ipv6.nwncd.com
+  port: 35332
+  password: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  sni: mya01.nwncd.com
+  udp: true
+  network: grpc
+  grpc-opts:
+    grpc-service-name: mygrpc
+- name: Z 马来西亚A02
+  type: vless
+  server: mya02.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: www.ukm.my
+  skip-cert-verify: false
+  reality-opts:
+    public-key: ja5nSqjg-8D4hpeQeh_VyMmKtTpYNDw5tpWCkYOG1y4
+    short-id: 7d95360c666cd7d1
+  client-fingerprint: chrome
+- name: Z 马来西亚A02 (台湾中转)
+  type: vless
+  server: optimize-tw-relay.nwncd.com
+  port: '50052'
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: www.ukm.my
+  skip-cert-verify: false
+  reality-opts:
+    public-key: ja5nSqjg-8D4hpeQeh_VyMmKtTpYNDw5tpWCkYOG1y4
+    short-id: 7d95360c666cd7d1
+  client-fingerprint: chrome
+- name: Z 马来西亚A02 (IPv6)
+  type: vless
+  server: mya02-ipv6.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: www.ukm.my
+  skip-cert-verify: false
+  reality-opts:
+    public-key: ja5nSqjg-8D4hpeQeh_VyMmKtTpYNDw5tpWCkYOG1y4
+    short-id: 7d95360c666cd7d1
+  client-fingerprint: chrome
+proxy-groups:
+- name: 🔰 节点选择
+  type: select
+  proxies:
+  - ♻️ 自动选择
+  - A Series - HK 17
+  - A Series - HK 40
+  - A Series - HK 41
+  - A Series - HK 43
+  - A Series - HK 44
+  - A Series - HK 45
+  - A Series - HK 46
+  - A Series - HK 47
+  - A Series - HK 48
+  - A Series - HK 49
+  - A Series - HK 50
+  - A Series - HK 51
+  - AC Series - HK 04
+  - C Series - HK 29
+  - California (美国) A09
+  - 将在 10-12 恢复 (California (美国) A20)
+  - 将在 10-03 恢复 (California (美国) B09)
+  - 将在 10-03 恢复 (California (美国) B09 (IPv6))
+  - 将在 10-03 恢复 (California (美国) B10)
+  - 将在 10-03 恢复 (California (美国) B10 (IPv6))
+  - 将在 10-03 恢复 (California (美国) B11)
+  - 将在 10-03 恢复 (California (美国) B11 (IPv6))
+  - California (美国) B12
+  - California (美国) B12 (IPv6)
+  - California (美国) B13
+  - California (美国) B13 (IPv6)
+  - California (美国) E05
+  - California (美国) E06
+  - California (美国) G05
+  - California (美国) G05 (IPv6)
+  - California (美国) G06
+  - California (美国) G06 (IPv6)
+  - California (美国) H01
+  - California (美国) H04
+  - California (美国) H10
+  - China Taiwan A01
+  - China Taiwan A01 (IPv6)
+  - China Taiwan B01
+  - China Taiwan B01 (IPv6)
+  - China Taiwan B02
+  - China Taiwan B02 (IPv6)
+  - China Taiwan C01
+  - China Taiwan C01 (IPv6)
+  - China Taiwan C02
+  - China Taiwan C02 (IPv6)
+  - China Taiwan D01
+  - China Taiwan D01 (IPv6)
+  - China Taiwan D02
+  - China Taiwan D02 (IPv6)
+  - China Taiwan E03
+  - China Taiwan E03 (IPv6)
+  - D Series - HK 01【故障】
+  - hktest03
+  - 将在 10-01 恢复 (Hong Kong C01)
+  - 将在 10-01 恢复 (Hong Kong C01 (IPv6))
+  - Japan A02
+  - Japan B01【故障】
+  - Japan C01【故障】
+  - Japan C01【故障】 (IPv6)
+  - Japan D01
+  - Japan D01 (IPv6)
+  - Japan E01
+  - Japan E01 (IPv6)
+  - Japan F02
+  - Japan F02 (IPv6)
+  - Japan M01【故障】
+  - Russia B02【故障】
+  - Russia B02【故障】 (IPv6)
+  - Z 土耳其01 (香港中转)
+  - Z 土耳其01 (台湾中转)
+  - Z 土耳其02 (香港中转)
+  - Z 土耳其02 (台湾中转)
+  - Z 德国A01
+  - Z 德国B01
+  - 将在 10-01 恢复 (Z 意大利A01 (IPv6))
+  - Z 意大利A02
+  - Z 意大利A02 (IPv6)
+  - Z 新加坡A02
+  - Z 新加坡A02 (香港中转)
+  - Z 新加坡A02 (IPv6)
+  - Z 新加坡A04
+  - Z 新加坡A04 (IPv6)
+  - 将在 10-01 恢复 (Z 澳大利亚A01)
+  - 将在 10-01 恢复 (Z 澳大利亚A01 (台湾中转))
+  - 将在 10-01 恢复 (Z 澳大利亚A01 (IPv6))
+  - Z 澳大利亚A02
+  - Z 澳大利亚A02 (台湾中转)
+  - Z 澳大利亚A02 (IPv6)
+  - Z 澳大利亚B01 (香港中转)
+  - Z 澳大利亚B01 (台湾中转)
+  - 将在 10-01 恢复 (Z 英国 A01)
+  - 将在 10-01 恢复 (Z 英国 A01 (香港中转))
+  - 将在 10-01 恢复 (Z 英国 A02)
+  - 将在 10-01 恢复 (Z 英国 A02 (香港中转))
+  - Z 英国 A04
+  - Z 英国 B01【故障】
+  - Z 英国 C01【故障】
+  - Z 英国 C02【故障】
+  - Z 英国 C03【故障】
+  - Z 英国 C04【故障】
+  - Z 菲律宾 A01【故障】
+  - Z 越南A01
+  - Z 越南A01 (香港中转)
+  - Z 越南A01 (台湾中转)
+  - 将在 10-04 恢复 (Z 韩国B04)
+  - Z 马来西亚A01
+  - Z 马来西亚A01 (香港中转)
+  - Z 马来西亚A01 (IPv6)
+  - Z 马来西亚A02
+  - Z 马来西亚A02 (台湾中转)
+  - Z 马来西亚A02 (IPv6)
+- name: ♻️ 自动选择
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  proxies:
+  - A Series - HK 17
+  - A Series - HK 40
+  - A Series - HK 41
+  - A Series - HK 43
+  - A Series - HK 44
+  - A Series - HK 45
+  - A Series - HK 46
+  - A Series - HK 47
+  - A Series - HK 48
+  - A Series - HK 49
+  - A Series - HK 50
+  - A Series - HK 51
+  - AC Series - HK 04
+  - C Series - HK 29
+  - California (美国) A09
+  - 将在 10-12 恢复 (California (美国) A20)
+  - 将在 10-03 恢复 (California (美国) B09)
+  - 将在 10-03 恢复 (California (美国) B09 (IPv6))
+  - 将在 10-03 恢复 (California (美国) B10)
+  - 将在 10-03 恢复 (California (美国) B10 (IPv6))
+  - 将在 10-03 恢复 (California (美国) B11)
+  - 将在 10-03 恢复 (California (美国) B11 (IPv6))
+  - California (美国) B12
+  - California (美国) B12 (IPv6)
+  - California (美国) B13
+  - California (美国) B13 (IPv6)
+  - California (美国) E05
+  - California (美国) E06
+  - California (美国) G05
+  - California (美国) G05 (IPv6)
+  - California (美国) G06
+  - California (美国) G06 (IPv6)
+  - California (美国) H01
+  - California (美国) H04
+  - California (美国) H10
+  - China Taiwan A01
+  - China Taiwan A01 (IPv6)
+  - China Taiwan B01
+  - China Taiwan B01 (IPv6)
+  - China Taiwan B02
+  - China Taiwan B02 (IPv6)
+  - China Taiwan C01
+  - China Taiwan C01 (IPv6)
+  - China Taiwan C02
+  - China Taiwan C02 (IPv6)
+  - China Taiwan D01
+  - China Taiwan D01 (IPv6)
+  - China Taiwan D02
+  - China Taiwan D02 (IPv6)
+  - China Taiwan E03
+  - China Taiwan E03 (IPv6)
+  - D Series - HK 01【故障】
+  - hktest03
+  - 将在 10-01 恢复 (Hong Kong C01)
+  - 将在 10-01 恢复 (Hong Kong C01 (IPv6))
+  - Japan A02
+  - Japan B01【故障】
+  - Japan C01【故障】
+  - Japan C01【故障】 (IPv6)
+  - Japan D01
+  - Japan D01 (IPv6)
+  - Japan E01
+  - Japan E01 (IPv6)
+  - Japan F02
+  - Japan F02 (IPv6)
+  - Japan M01【故障】
+  - Russia B02【故障】
+  - Russia B02【故障】 (IPv6)
+  - Z 土耳其01 (香港中转)
+  - Z 土耳其01 (台湾中转)
+  - Z 土耳其02 (香港中转)
+  - Z 土耳其02 (台湾中转)
+  - Z 德国A01
+  - Z 德国B01
+  - 将在 10-01 恢复 (Z 意大利A01 (IPv6))
+  - Z 意大利A02
+  - Z 意大利A02 (IPv6)
+  - Z 新加坡A02
+  - Z 新加坡A02 (香港中转)
+  - Z 新加坡A02 (IPv6)
+  - Z 新加坡A04
+  - Z 新加坡A04 (IPv6)
+  - 将在 10-01 恢复 (Z 澳大利亚A01)
+  - 将在 10-01 恢复 (Z 澳大利亚A01 (台湾中转))
+  - 将在 10-01 恢复 (Z 澳大利亚A01 (IPv6))
+  - Z 澳大利亚A02
+  - Z 澳大利亚A02 (台湾中转)
+  - Z 澳大利亚A02 (IPv6)
+  - Z 澳大利亚B01 (香港中转)
+  - Z 澳大利亚B01 (台湾中转)
+  - 将在 10-01 恢复 (Z 英国 A01)
+  - 将在 10-01 恢复 (Z 英国 A01 (香港中转))
+  - 将在 10-01 恢复 (Z 英国 A02)
+  - 将在 10-01 恢复 (Z 英国 A02 (香港中转))
+  - Z 英国 A04
+  - Z 英国 B01【故障】
+  - Z 英国 C01【故障】
+  - Z 英国 C02【故障】
+  - Z 英国 C03【故障】
+  - Z 英国 C04【故障】
+  - Z 菲律宾 A01【故障】
+  - Z 越南A01
+  - Z 越南A01 (香港中转)
+  - Z 越南A01 (台湾中转)
+  - 将在 10-04 恢复 (Z 韩国B04)
+  - Z 马来西亚A01
+  - Z 马来西亚A01 (香港中转)
+  - Z 马来西亚A01 (IPv6)
+  - Z 马来西亚A02
+  - Z 马来西亚A02 (台湾中转)
+  - Z 马来西亚A02 (IPv6)
+- name: 🤖 AI 服务
+  type: select
+  proxies:
+  - 🔰 节点选择
+  - ♻️ 自动选择
+  - DIRECT
+  - A Series - HK 17
+  - A Series - HK 40
+  - A Series - HK 41
+  - A Series - HK 43
+  - A Series - HK 44
+  - A Series - HK 45
+  - A Series - HK 46
+  - A Series - HK 47
+  - A Series - HK 48
+  - A Series - HK 49
+  - A Series - HK 50
+  - A Series - HK 51
+  - AC Series - HK 04
+  - C Series - HK 29
+  - California (美国) A09
+  - 将在 10-12 恢复 (California (美国) A20)
+  - 将在 10-03 恢复 (California (美国) B09)
+  - 将在 10-03 恢复 (California (美国) B09 (IPv6))
+  - 将在 10-03 恢复 (California (美国) B10)
+  - 将在 10-03 恢复 (California (美国) B10 (IPv6))
+  - 将在 10-03 恢复 (California (美国) B11)
+  - 将在 10-03 恢复 (California (美国) B11 (IPv6))
+  - California (美国) B12
+  - California (美国) B12 (IPv6)
+  - California (美国) B13
+  - California (美国) B13 (IPv6)
+  - California (美国) E05
+  - California (美国) E06
+  - California (美国) G05
+  - California (美国) G05 (IPv6)
+  - California (美国) G06
+  - California (美国) G06 (IPv6)
+  - California (美国) H01
+  - California (美国) H04
+  - California (美国) H10
+  - China Taiwan A01
+  - China Taiwan A01 (IPv6)
+  - China Taiwan B01
+  - China Taiwan B01 (IPv6)
+  - China Taiwan B02
+  - China Taiwan B02 (IPv6)
+  - China Taiwan C01
+  - China Taiwan C01 (IPv6)
+  - China Taiwan C02
+  - China Taiwan C02 (IPv6)
+  - China Taiwan D01
+  - China Taiwan D01 (IPv6)
+  - China Taiwan D02
+  - China Taiwan D02 (IPv6)
+  - China Taiwan E03
+  - China Taiwan E03 (IPv6)
+  - D Series - HK 01【故障】
+  - hktest03
+  - 将在 10-01 恢复 (Hong Kong C01)
+  - 将在 10-01 恢复 (Hong Kong C01 (IPv6))
+  - Japan A02
+  - Japan B01【故障】
+  - Japan C01【故障】
+  - Japan C01【故障】 (IPv6)
+  - Japan D01
+  - Japan D01 (IPv6)
+  - Japan E01
+  - Japan E01 (IPv6)
+  - Japan F02
+  - Japan F02 (IPv6)
+  - Japan M01【故障】
+  - Russia B02【故障】
+  - Russia B02【故障】 (IPv6)
+  - Z 土耳其01 (香港中转)
+  - Z 土耳其01 (台湾中转)
+  - Z 土耳其02 (香港中转)
+  - Z 土耳其02 (台湾中转)
+  - Z 德国A01
+  - Z 德国B01
+  - 将在 10-01 恢复 (Z 意大利A01 (IPv6))
+  - Z 意大利A02
+  - Z 意大利A02 (IPv6)
+  - Z 新加坡A02
+  - Z 新加坡A02 (香港中转)
+  - Z 新加坡A02 (IPv6)
+  - Z 新加坡A04
+  - Z 新加坡A04 (IPv6)
+  - 将在 10-01 恢复 (Z 澳大利亚A01)
+  - 将在 10-01 恢复 (Z 澳大利亚A01 (台湾中转))
+  - 将在 10-01 恢复 (Z 澳大利亚A01 (IPv6))
+  - Z 澳大利亚A02
+  - Z 澳大利亚A02 (台湾中转)
+  - Z 澳大利亚A02 (IPv6)
+  - Z 澳大利亚B01 (香港中转)
+  - Z 澳大利亚B01 (台湾中转)
+  - 将在 10-01 恢复 (Z 英国 A01)
+  - 将在 10-01 恢复 (Z 英国 A01 (香港中转))
+  - 将在 10-01 恢复 (Z 英国 A02)
+  - 将在 10-01 恢复 (Z 英国 A02 (香港中转))
+  - Z 英国 A04
+  - Z 英国 B01【故障】
+  - Z 英国 C01【故障】
+  - Z 英国 C02【故障】
+  - Z 英国 C03【故障】
+  - Z 英国 C04【故障】
+  - Z 菲律宾 A01【故障】
+  - Z 越南A01
+  - Z 越南A01 (香港中转)
+  - Z 越南A01 (台湾中转)
+  - 将在 10-04 恢复 (Z 韩国B04)
+  - Z 马来西亚A01
+  - Z 马来西亚A01 (香港中转)
+  - Z 马来西亚A01 (IPv6)
+  - Z 马来西亚A02
+  - Z 马来西亚A02 (台湾中转)
+  - Z 马来西亚A02 (IPv6)
+- name: 📺 流媒体
+  type: select
+  proxies:
+  - 🔰 节点选择
+  - ♻️ 自动选择
+  - DIRECT
+  - A Series - HK 17
+  - A Series - HK 40
+  - A Series - HK 41
+  - A Series - HK 43
+  - A Series - HK 44
+  - A Series - HK 45
+  - A Series - HK 46
+  - A Series - HK 47
+  - A Series - HK 48
+  - A Series - HK 49
+  - A Series - HK 50
+  - A Series - HK 51
+  - AC Series - HK 04
+  - C Series - HK 29
+  - California (美国) A09
+  - 将在 10-12 恢复 (California (美国) A20)
+  - 将在 10-03 恢复 (California (美国) B09)
+  - 将在 10-03 恢复 (California (美国) B09 (IPv6))
+  - 将在 10-03 恢复 (California (美国) B10)
+  - 将在 10-03 恢复 (California (美国) B10 (IPv6))
+  - 将在 10-03 恢复 (California (美国) B11)
+  - 将在 10-03 恢复 (California (美国) B11 (IPv6))
+  - California (美国) B12
+  - California (美国) B12 (IPv6)
+  - California (美国) B13
+  - California (美国) B13 (IPv6)
+  - California (美国) E05
+  - California (美国) E06
+  - California (美国) G05
+  - California (美国) G05 (IPv6)
+  - California (美国) G06
+  - California (美国) G06 (IPv6)
+  - California (美国) H01
+  - California (美国) H04
+  - California (美国) H10
+  - China Taiwan A01
+  - China Taiwan A01 (IPv6)
+  - China Taiwan B01
+  - China Taiwan B01 (IPv6)
+  - China Taiwan B02
+  - China Taiwan B02 (IPv6)
+  - China Taiwan C01
+  - China Taiwan C01 (IPv6)
+  - China Taiwan C02
+  - China Taiwan C02 (IPv6)
+  - China Taiwan D01
+  - China Taiwan D01 (IPv6)
+  - China Taiwan D02
+  - China Taiwan D02 (IPv6)
+  - China Taiwan E03
+  - China Taiwan E03 (IPv6)
+  - D Series - HK 01【故障】
+  - hktest03
+  - 将在 10-01 恢复 (Hong Kong C01)
+  - 将在 10-01 恢复 (Hong Kong C01 (IPv6))
+  - Japan A02
+  - Japan B01【故障】
+  - Japan C01【故障】
+  - Japan C01【故障】 (IPv6)
+  - Japan D01
+  - Japan D01 (IPv6)
+  - Japan E01
+  - Japan E01 (IPv6)
+  - Japan F02
+  - Japan F02 (IPv6)
+  - Japan M01【故障】
+  - Russia B02【故障】
+  - Russia B02【故障】 (IPv6)
+  - Z 土耳其01 (香港中转)
+  - Z 土耳其01 (台湾中转)
+  - Z 土耳其02 (香港中转)
+  - Z 土耳其02 (台湾中转)
+  - Z 德国A01
+  - Z 德国B01
+  - 将在 10-01 恢复 (Z 意大利A01 (IPv6))
+  - Z 意大利A02
+  - Z 意大利A02 (IPv6)
+  - Z 新加坡A02
+  - Z 新加坡A02 (香港中转)
+  - Z 新加坡A02 (IPv6)
+  - Z 新加坡A04
+  - Z 新加坡A04 (IPv6)
+  - 将在 10-01 恢复 (Z 澳大利亚A01)
+  - 将在 10-01 恢复 (Z 澳大利亚A01 (台湾中转))
+  - 将在 10-01 恢复 (Z 澳大利亚A01 (IPv6))
+  - Z 澳大利亚A02
+  - Z 澳大利亚A02 (台湾中转)
+  - Z 澳大利亚A02 (IPv6)
+  - Z 澳大利亚B01 (香港中转)
+  - Z 澳大利亚B01 (台湾中转)
+  - 将在 10-01 恢复 (Z 英国 A01)
+  - 将在 10-01 恢复 (Z 英国 A01 (香港中转))
+  - 将在 10-01 恢复 (Z 英国 A02)
+  - 将在 10-01 恢复 (Z 英国 A02 (香港中转))
+  - Z 英国 A04
+  - Z 英国 B01【故障】
+  - Z 英国 C01【故障】
+  - Z 英国 C02【故障】
+  - Z 英国 C03【故障】
+  - Z 英国 C04【故障】
+  - Z 菲律宾 A01【故障】
+  - Z 越南A01
+  - Z 越南A01 (香港中转)
+  - Z 越南A01 (台湾中转)
+  - 将在 10-04 恢复 (Z 韩国B04)
+  - Z 马来西亚A01
+  - Z 马来西亚A01 (香港中转)
+  - Z 马来西亚A01 (IPv6)
+  - Z 马来西亚A02
+  - Z 马来西亚A02 (台湾中转)
+  - Z 马来西亚A02 (IPv6)
+- name: Ⓜ️ 微软服务
+  type: select
+  proxies:
+  - DIRECT
+  - 🔰 节点选择
+  - ♻️ 自动选择
+- name: 🍎 苹果服务
+  type: select
+  proxies:
+  - DIRECT
+  - 🔰 节点选择
+  - ♻️ 自动选择
+- name: 📲 电报信息
+  type: select
+  proxies:
+  - 🔰 节点选择
+  - ♻️ 自动选择
+  - A Series - HK 17
+  - A Series - HK 40
+  - A Series - HK 41
+  - A Series - HK 43
+  - A Series - HK 44
+  - A Series - HK 45
+  - A Series - HK 46
+  - A Series - HK 47
+  - A Series - HK 48
+  - A Series - HK 49
+  - A Series - HK 50
+  - A Series - HK 51
+  - AC Series - HK 04
+  - C Series - HK 29
+  - California (美国) A09
+  - 将在 10-12 恢复 (California (美国) A20)
+  - 将在 10-03 恢复 (California (美国) B09)
+  - 将在 10-03 恢复 (California (美国) B09 (IPv6))
+  - 将在 10-03 恢复 (California (美国) B10)
+  - 将在 10-03 恢复 (California (美国) B10 (IPv6))
+  - 将在 10-03 恢复 (California (美国) B11)
+  - 将在 10-03 恢复 (California (美国) B11 (IPv6))
+  - California (美国) B12
+  - California (美国) B12 (IPv6)
+  - California (美国) B13
+  - California (美国) B13 (IPv6)
+  - California (美国) E05
+  - California (美国) E06
+  - California (美国) G05
+  - California (美国) G05 (IPv6)
+  - California (美国) G06
+  - California (美国) G06 (IPv6)
+  - California (美国) H01
+  - California (美国) H04
+  - California (美国) H10
+  - China Taiwan A01
+  - China Taiwan A01 (IPv6)
+  - China Taiwan B01
+  - China Taiwan B01 (IPv6)
+  - China Taiwan B02
+  - China Taiwan B02 (IPv6)
+  - China Taiwan C01
+  - China Taiwan C01 (IPv6)
+  - China Taiwan C02
+  - China Taiwan C02 (IPv6)
+  - China Taiwan D01
+  - China Taiwan D01 (IPv6)
+  - China Taiwan D02
+  - China Taiwan D02 (IPv6)
+  - China Taiwan E03
+  - China Taiwan E03 (IPv6)
+  - D Series - HK 01【故障】
+  - hktest03
+  - 将在 10-01 恢复 (Hong Kong C01)
+  - 将在 10-01 恢复 (Hong Kong C01 (IPv6))
+  - Japan A02
+  - Japan B01【故障】
+  - Japan C01【故障】
+  - Japan C01【故障】 (IPv6)
+  - Japan D01
+  - Japan D01 (IPv6)
+  - Japan E01
+  - Japan E01 (IPv6)
+  - Japan F02
+  - Japan F02 (IPv6)
+  - Japan M01【故障】
+  - Russia B02【故障】
+  - Russia B02【故障】 (IPv6)
+  - Z 土耳其01 (香港中转)
+  - Z 土耳其01 (台湾中转)
+  - Z 土耳其02 (香港中转)
+  - Z 土耳其02 (台湾中转)
+  - Z 德国A01
+  - Z 德国B01
+  - 将在 10-01 恢复 (Z 意大利A01 (IPv6))
+  - Z 意大利A02
+  - Z 意大利A02 (IPv6)
+  - Z 新加坡A02
+  - Z 新加坡A02 (香港中转)
+  - Z 新加坡A02 (IPv6)
+  - Z 新加坡A04
+  - Z 新加坡A04 (IPv6)
+  - 将在 10-01 恢复 (Z 澳大利亚A01)
+  - 将在 10-01 恢复 (Z 澳大利亚A01 (台湾中转))
+  - 将在 10-01 恢复 (Z 澳大利亚A01 (IPv6))
+  - Z 澳大利亚A02
+  - Z 澳大利亚A02 (台湾中转)
+  - Z 澳大利亚A02 (IPv6)
+  - Z 澳大利亚B01 (香港中转)
+  - Z 澳大利亚B01 (台湾中转)
+  - 将在 10-01 恢复 (Z 英国 A01)
+  - 将在 10-01 恢复 (Z 英国 A01 (香港中转))
+  - 将在 10-01 恢复 (Z 英国 A02)
+  - 将在 10-01 恢复 (Z 英国 A02 (香港中转))
+  - Z 英国 A04
+  - Z 英国 B01【故障】
+  - Z 英国 C01【故障】
+  - Z 英国 C02【故障】
+  - Z 英国 C03【故障】
+  - Z 英国 C04【故障】
+  - Z 菲律宾 A01【故障】
+  - Z 越南A01
+  - Z 越南A01 (香港中转)
+  - Z 越南A01 (台湾中转)
+  - 将在 10-04 恢复 (Z 韩国B04)
+  - Z 马来西亚A01
+  - Z 马来西亚A01 (香港中转)
+  - Z 马来西亚A01 (IPv6)
+  - Z 马来西亚A02
+  - Z 马来西亚A02 (台湾中转)
+  - Z 马来西亚A02 (IPv6)
+- name: 🎯 全球直连
+  type: select
+  proxies:
+  - DIRECT
+- name: 🛑 全球拦截
+  type: select
+  proxies:
+  - REJECT
+- name: 🐟 漏网之鱼
+  type: select
+  proxies:
+  - 🔰 节点选择
+  - ♻️ 自动选择
+  - DIRECT
+rules:
+- DOMAIN,local,🎯 全球直连
+- IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
+- IP-CIDR,10.0.0.0/8,🎯 全球直连,no-resolve
+- IP-CIDR,172.16.0.0/12,🎯 全球直连,no-resolve
+- IP-CIDR,127.0.0.0/8,🎯 全球直连,no-resolve
+- IP-CIDR,100.64.0.0/10,🎯 全球直连,no-resolve
+- IP-CIDR6,::1/128,🎯 全球直连,no-resolve
+- IP-CIDR6,fc00::/7,🎯 全球直连,no-resolve
+- IP-CIDR6,fe80::/10,🎯 全球直连,no-resolve
+- DOMAIN-SUFFIX,openai.com,🤖 AI 服务
+- DOMAIN-SUFFIX,chatgpt.com,🤖 AI 服务
+- DOMAIN-SUFFIX,oaistatic.com,🤖 AI 服务
+- DOMAIN-SUFFIX,anthropic.com,🤖 AI 服务
+- DOMAIN-SUFFIX,claude.ai,🤖 AI 服务
+- DOMAIN-SUFFIX,gemini.google.com,🤖 AI 服务
+- DOMAIN-SUFFIX,generativelanguage.googleapis.com,🤖 AI 服务
+- DOMAIN-SUFFIX,netflix.com,📺 流媒体
+- DOMAIN-SUFFIX,nflxvideo.net,📺 流媒体
+- DOMAIN-SUFFIX,youtube.com,📺 流媒体
+- DOMAIN-SUFFIX,ytimg.com,📺 流媒体
+- DOMAIN-SUFFIX,microsoft.com,Ⓜ️ 微软服务
+- DOMAIN-SUFFIX,microsoft.cn,Ⓜ️ 微软服务
+- DOMAIN-SUFFIX,office.com,Ⓜ️ 微软服务
+- DOMAIN-SUFFIX,apple.com,🍎 苹果服务
+- DOMAIN-SUFFIX,icloud.com,🍎 苹果服务
+- DOMAIN-SUFFIX,telegram.org,📲 电报信息
+- DOMAIN-SUFFIX,t.me,📲 电报信息
+- DOMAIN-SUFFIX,tdesktop.com,📲 电报信息
+- GEOIP,CN,🎯 全球直连
+- MATCH,🐟 漏网之鱼
