@@ -38,7 +38,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: KLbrCIgZ217-hpm3y_5vEU7EMVm-mn5LnreB4Tl8US8
-    short-id: 8e818e731170f2da
+    short-id: a82d3b270f47e2b0
   client-fingerprint: chrome
 - name: A Series - HK 41
   type: vless
@@ -53,7 +53,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: YPQiKLO97obPfyXTXlBOY1rYwEYTvUB1SFj1sjWTlUc
-    short-id: 2b9f1f910ad62957
+    short-id: 34a90f1bbb136fe2
   client-fingerprint: chrome
 - name: A Series - HK 43
   type: vless
@@ -83,7 +83,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: uIp789od9Tw1rEVWpVTZPM8Fs5e5CtGao2_hLuY0BHg
-    short-id: 2f35f8447e5d3ec1
+    short-id: 7f6c3ce746146f9e
   client-fingerprint: chrome
 - name: A Series - HK 45
   type: vless
@@ -98,7 +98,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: cZpUFOL0E9jnEXjQwQTiPZ_A0zHff8LTr8qkSA-RnBQ
-    short-id: 7195a56fb35ecdf8
+    short-id: 685822c0351ce4fc
   client-fingerprint: chrome
 - name: A Series - HK 46
   type: vless
@@ -128,7 +128,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: dkURzQ2gnVPa61DHkeii45KbsOtpAWH-jfzTHlf6nxc
-    short-id: 1d962b442271ed69
+    short-id: ebbea9dac1286258
   client-fingerprint: chrome
 - name: A Series - HK 48
   type: vless
@@ -158,7 +158,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: vjvTFs4Uyk1NGPNfuM6rWw3ipShaZDi9xF9zSOHTJjw
-    short-id: dd6aef721e166f28
+    short-id: 4ff1a84be787d114
   client-fingerprint: chrome
 - name: A Series - HK 50
   type: vless
@@ -173,7 +173,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: h8WwErWzD2tTELxA2bw4nEIMZ8PCeL5GimHcPq_Gv0k
-    short-id: 3ada71f16c05f32a
+    short-id: 03d111df6238bbb0
   client-fingerprint: chrome
 - name: A Series - HK 51
   type: vless
@@ -188,7 +188,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: dipWgUgSvhUHRxjs7upOKKxtgIvAXjPJJtqzaiWczWg
-    short-id: 3d3eedb050c8afde
+    short-id: 366f5e9444508760
   client-fingerprint: chrome
 - name: AC Series - HK 04
   type: anytls
@@ -236,7 +236,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: NJqL8WJKrZXQzJFOGtmxywyLnNLFF3wTg_AUxft_dQQ
-    short-id: 5277acf5b0bc157d
+    short-id: 147f2c5fd8af7380
   client-fingerprint: chrome
 - name: 将在 10-03 恢复 (California (美国) B09)
   type: vless
@@ -311,7 +311,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: JHoYDGgbJsZCHC8qJTdOUJgKkXEqwn54PEg5j623wSc
-    short-id: 2c683b8b81e4cad8
+    short-id: c4177821b4ec1a15
   client-fingerprint: chrome
 - name: 将在 10-03 恢复 (California (美国) B11 (IPv6))
   type: vless
@@ -326,7 +326,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: JHoYDGgbJsZCHC8qJTdOUJgKkXEqwn54PEg5j623wSc
-    short-id: 2c683b8b81e4cad8
+    short-id: c4177821b4ec1a15
   client-fingerprint: chrome
 - name: California (美国) B12
   type: vless
@@ -341,7 +341,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: FytQzcR1FTpF3vb6ba2zG-UWcVaaAc-3oTDh57AyDwk
-    short-id: 005bf4c973273e69
+    short-id: 88ca1bb905ddde0a
   client-fingerprint: chrome
 - name: California (美国) B12 (IPv6)
   type: vless
@@ -356,7 +356,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: FytQzcR1FTpF3vb6ba2zG-UWcVaaAc-3oTDh57AyDwk
-    short-id: 005bf4c973273e69
+    short-id: 88ca1bb905ddde0a
   client-fingerprint: chrome
 - name: California (美国) B13
   type: vless
@@ -371,7 +371,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: F_NKpyxO8pserXqT1RPl_lwHvtXqqpjdP_he-MDMgWg
-    short-id: d14a0767595251d4
+    short-id: 5740815b7f0f2d69
   client-fingerprint: chrome
 - name: California (美国) B13 (IPv6)
   type: vless
@@ -386,7 +386,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: F_NKpyxO8pserXqT1RPl_lwHvtXqqpjdP_he-MDMgWg
-    short-id: d14a0767595251d4
+    short-id: 5740815b7f0f2d69
   client-fingerprint: chrome
 - name: California (美国) E05
   type: vless
@@ -401,7 +401,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: TO1goiQ7rNvN1AELFtyUFhk1D8xibX63opdKMLKRJno
-    short-id: 00540b4ab0ed15b7
+    short-id: f2523df1f4cc9ddb
   client-fingerprint: chrome
 - name: California (美国) E06
   type: vless
@@ -431,7 +431,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: yI5sbSOwprh9LCV0jBp57Jcdh-hEAJy1OeIpTAnoiFQ
-    short-id: a2501bee52a52eb0
+    short-id: 14b87663b64b3728
   client-fingerprint: chrome
 - name: California (美国) G05 (IPv6)
   type: vless
@@ -446,7 +446,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: yI5sbSOwprh9LCV0jBp57Jcdh-hEAJy1OeIpTAnoiFQ
-    short-id: a2501bee52a52eb0
+    short-id: 14b87663b64b3728
   client-fingerprint: chrome
 - name: California (美国) G06
   type: anytls
@@ -500,7 +500,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: 3jFhcTDJtEiy0ScP-9Qk5BMv4WHu10hyodfLtgRhNhw
-    short-id: 0d2c5f6704ececbd
+    short-id: 3cc2d2ece37a5302
   client-fingerprint: chrome
 - name: China Taiwan A01
   type: anytls
@@ -547,7 +547,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: DtDRl5uBVO1O-rNh4jZXOH0GjSM-uus9k4C218ACq0g
-    short-id: 3e12b20e892c5610
+    short-id: c11cf1793aa87c6d
   client-fingerprint: chrome
 - name: China Taiwan B02 (IPv6)
   type: vless
@@ -562,7 +562,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: DtDRl5uBVO1O-rNh4jZXOH0GjSM-uus9k4C218ACq0g
-    short-id: 3e12b20e892c5610
+    short-id: c11cf1793aa87c6d
   client-fingerprint: chrome
 - name: China Taiwan C01
   type: vless
@@ -577,7 +577,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: slCwU43XWaY9DhwlACGs_whHIak6qNI2FyxpWKLyC3U
-    short-id: e1a1e4662d6fed61
+    short-id: 285fdc69077e805e
   client-fingerprint: chrome
 - name: China Taiwan C01 (IPv6)
   type: vless
@@ -592,7 +592,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: slCwU43XWaY9DhwlACGs_whHIak6qNI2FyxpWKLyC3U
-    short-id: e1a1e4662d6fed61
+    short-id: 285fdc69077e805e
   client-fingerprint: chrome
 - name: China Taiwan C02
   type: vless
@@ -669,7 +669,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: WaUD5xc_5v784vAONkLPh22t834Z1DaMRxZc_qUf7iA
-    short-id: 779988a7fcb9790a
+    short-id: ef83771d977da76b
   client-fingerprint: chrome
 - name: China Taiwan E03 (IPv6)
   type: vless
@@ -684,7 +684,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: WaUD5xc_5v784vAONkLPh22t834Z1DaMRxZc_qUf7iA
-    short-id: 779988a7fcb9790a
+    short-id: ef83771d977da76b
   client-fingerprint: chrome
 - name: D Series - HK 01【故障】
   type: vless
@@ -714,7 +714,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: wcPdO7vLuyl09T7caPDKdigJVCavhU-d2DP2ihTumh4
-    short-id: 5e21ea42c0cea033
+    short-id: a0678c8fad913064
   client-fingerprint: chrome
 - name: 将在 10-01 恢复 (Hong Kong C01)
   type: vless
@@ -767,7 +767,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: qh0HBQmSSC6TGxwM4euJuYUvW7lE1VjdfJ-Ds9h96GQ
-    short-id: ee50cfcc4323e735
+    short-id: 10ed9cd61dec11a0
   client-fingerprint: chrome
 - name: Japan C01【故障】
   type: vless
@@ -832,7 +832,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: IGdV-Ki7JH-AEEC1oCEMmTtN5oVLXzpPE0c0gRXQKms
-    short-id: 6e16ab6d2c103273
+    short-id: 1faf7c598917e01c
   client-fingerprint: chrome
 - name: Japan E01 (IPv6)
   type: vless
@@ -847,7 +847,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: IGdV-Ki7JH-AEEC1oCEMmTtN5oVLXzpPE0c0gRXQKms
-    short-id: 6e16ab6d2c103273
+    short-id: 1faf7c598917e01c
   client-fingerprint: chrome
 - name: Japan F02
   type: anytls
@@ -893,7 +893,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: fu_PpIuMxYIWjgaTjGg-er00oBnFp0CXr22-0hH72FQ
-    short-id: 7dc502cffda808c1
+    short-id: 469b11e196325f77
   client-fingerprint: chrome
 - name: Russia B02【故障】 (IPv6)
   type: vless
@@ -908,7 +908,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: fu_PpIuMxYIWjgaTjGg-er00oBnFp0CXr22-0hH72FQ
-    short-id: 7dc502cffda808c1
+    short-id: 469b11e196325f77
   client-fingerprint: chrome
 - name: Z 土耳其01 (香港中转)
   type: trojan
@@ -1003,7 +1003,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: PiGBZboC9WgtwjIET6EVvrchq5gGcxeU_Jb5BN10rmg
-    short-id: 66cbea1291f3744e
+    short-id: 0bb0d7173275f469
   client-fingerprint: chrome
 - name: Z 意大利A02 (IPv6)
   type: vless
@@ -1018,7 +1018,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: PiGBZboC9WgtwjIET6EVvrchq5gGcxeU_Jb5BN10rmg
-    short-id: 66cbea1291f3744e
+    short-id: 0bb0d7173275f469
   client-fingerprint: chrome
 - name: Z 新加坡A02
   type: vless
@@ -1033,7 +1033,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: pTdxZcMK82pJKcTcdn3TCWnTNBY013tkh4A9usOzMjk
-    short-id: d63fb08c3b296103
+    short-id: fa72588c1ac29406
   client-fingerprint: chrome
 - name: Z 新加坡A02 (香港中转)
   type: vless
@@ -1048,7 +1048,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: pTdxZcMK82pJKcTcdn3TCWnTNBY013tkh4A9usOzMjk
-    short-id: d63fb08c3b296103
+    short-id: fa72588c1ac29406
   client-fingerprint: chrome
 - name: Z 新加坡A02 (IPv6)
   type: vless
@@ -1063,7 +1063,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: pTdxZcMK82pJKcTcdn3TCWnTNBY013tkh4A9usOzMjk
-    short-id: d63fb08c3b296103
+    short-id: fa72588c1ac29406
   client-fingerprint: chrome
 - name: Z 新加坡A04
   type: vless
@@ -1198,7 +1198,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: 7f6j5ahpML_OzWx7N3Ijrmz5otsNvCSmMWRuGkHbpD4
-    short-id: 808a00af47b053c2
+    short-id: 882db48279e05da3
   client-fingerprint: chrome
 - name: Z 澳大利亚B01 (台湾中转)
   type: vless
@@ -1213,7 +1213,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: 7f6j5ahpML_OzWx7N3Ijrmz5otsNvCSmMWRuGkHbpD4
-    short-id: 808a00af47b053c2
+    short-id: 882db48279e05da3
   client-fingerprint: chrome
 - name: 将在 10-01 恢复 (Z 英国 A01)
   type: trojan
@@ -1327,7 +1327,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: spjJJHsOMo5mBb1IWtBEoQMHj9qL6U_OzJ2RyaKMdS8
-    short-id: cc41d001c3c05d88
+    short-id: baba966b48b35562
   client-fingerprint: chrome
 - name: Z 越南A01
   type: trojan
@@ -1372,7 +1372,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: wcPdO7vLuyl09T7caPDKdigJVCavhU-d2DP2ihTumh4
-    short-id: a0678c8fad913064
+    short-id: 5e21ea42c0cea033
   client-fingerprint: chrome
 - name: Z 马来西亚A01
   type: trojan
