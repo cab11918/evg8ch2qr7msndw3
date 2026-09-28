@@ -127,7 +127,7 @@
       <div class="sub">对话诊断 · 自动修改 · 更新订阅</div>
     </div>
     <div class="spacer"></div>
-    <div class="chip" id="chip-ver" title="页面版本">v6</div>
+    <div class="chip" id="chip-ver" title="页面版本">v7</div>
     <div class="chip" id="chip-model" title="当前模型">未配置</div>
     <button class="icon-btn" id="btn-settings" title="设置">⚙</button>
   </header>
@@ -214,7 +214,7 @@
 "use strict";
 const $ = s => document.querySelector(s);
 const STORE_KEY = "self-host-rule-assistant-v1";
-const PAGE_VERSION = 6;
+const PAGE_VERSION = 7;
 const DEFAULTS = {
   ai_base_url: "https://open.bigmodel.cn/api/v1",
   ai_model: "glm-5.3",
@@ -288,7 +288,7 @@ function fmtMd(t){
   html = html.replace(/```(?:yaml|yml)?\s*\n([\s\S]*?)```/g, (mm, code) => "<pre><code>"+code.replace(/\n$/,"")+"</code></pre>");
   html = html.replace(/`([^`\n]+)`/g, "<code>$1</code>");
   html = html.replace(/\*\*([^*\n]+)\*\*/g, "<b>$1</b>");
-  html = html.replace(/\n/g, "<br>");
+  html = html.replace(/\n/g, "<br/>");
   return html;
 }
 function lineDiff(a, b){
@@ -569,8 +569,8 @@ async function applyDiff(){
     const summary = ($("#diff-msg").value.trim() || "update rules via assistant").slice(0,72);
     const j = await commitRules(yaml, rules.sha, summary);
     closeOverlays();
-    const bubble = addMsg("ai", `✅ 已提交：<b>${esc(summary)}</b><br>
-      流水线约 30 秒内自动重建并发布；订阅链接因 CDN 缓存，通常几分钟内更新（最长约 12 小时）。<br>
+    const bubble = addMsg("ai", `✅ 已提交：<b>${esc(summary)}</b><br/>
+      流水线约 30 秒内自动重建并发布；订阅链接因 CDN 缓存，通常几分钟内更新（最长约 12 小时）。<br/>
       <a href="${j.commit && j.commit.html_url || "#"}" target="_blank" rel="noopener" style="color:var(--acc2)">查看提交</a>`);
     toast("已提交，订阅将自动更新");
   } catch(e){
