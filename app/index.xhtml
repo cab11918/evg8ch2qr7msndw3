@@ -127,6 +127,7 @@
       <div class="sub">对话诊断 · 自动修改 · 更新订阅</div>
     </div>
     <div class="spacer"></div>
+    <div class="chip" id="chip-ver" title="页面版本">v6</div>
     <div class="chip" id="chip-model" title="当前模型">未配置</div>
     <button class="icon-btn" id="btn-settings" title="设置">⚙</button>
   </header>
@@ -213,6 +214,7 @@
 "use strict";
 const $ = s => document.querySelector(s);
 const STORE_KEY = "self-host-rule-assistant-v1";
+const PAGE_VERSION = 6;
 const DEFAULTS = {
   ai_base_url: "https://open.bigmodel.cn/api/v1",
   ai_model: "glm-5.3",
@@ -398,7 +400,9 @@ async function callAI(){
     try { const j = await r.json(); if (j.error && j.error.message) msg = j.error.message; else if (j.message) msg = j.message; } catch(e){}
     throw new Error("AI 接口: "+msg);
   }
-  const j = await r.json();
+  let j = null;
+  try { j = await r.json(); }
+  catch(e){ throw new Error("AI 接口返回了无法解析的空响应"); }
   let c = "";
   if ((s.ai_protocol || "responses") === "responses" && Array.isArray(j.output)) {
     const texts = [];
@@ -627,8 +631,31 @@ $("#s-test-gh").onclick = async () => {
 };
 $("#diff-apply").onclick = applyDiff;
 
+async function checkUpdate(){
+  try {
+    const s = loadSettings();
+    if (!s.gh_token) return;
+    const m = s.cdn_base.match(/gh\/([^/@]+)@/);
+    if (!m) return;
+    const f = await ghApi(`/repos/${m[1]}/contents/app/index.xhtml?ref=main&t=${Date.now()}`);
+    const txt = b64decode(f.content);
+    const mv = txt.match(/PAGE_VERSION\s*=\s*(\d+)/);
+    if (mv && +mv[1] > PAGE_VERSION){
+      const url = `https://cdn.jsdelivr.net/gh/${m[1]}@${f.sha}/app/index.xhtml`;
+      const col = $("#chat");
+      const div = document.createElement("div");
+      div.className = "hero";
+      div.innerHTML = `<h2>🔄 发现新版本 v${mv[1]}（当前 v${PAGE_VERSION}）</h2>
+        <div class="go"><button class="btn pri" id="upd-go">一键升级</button></div>`;
+      col.insertBefore(div, col.firstChild);
+      $("#upd-go").onclick = () => location.href = url;
+    }
+  } catch(e){}
+}
+
 refreshChips();
 addHero();
+checkUpdate();
 autosize();
 //]]>
 </script>
