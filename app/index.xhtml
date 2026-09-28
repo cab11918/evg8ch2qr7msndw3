@@ -450,38 +450,33 @@ async function cloudSend(text){
   const tm = setInterval(()=>{ const e=$("#elapsed"); if(e) e.textContent=Math.round((Date.now()-t0)/1000)+"s"; }, 1000);
   const setStatus = t => { bubble.innerHTML = `<span class="think"><span class="d"></span><span class="d"></span><span class="d"></span> ${t} <span id="elapsed">${Math.round((Date.now()-t0)/1000)}s</span></span>`; };
   try {
-    let beforeId = 0;
+    const fileUrl = `/repos/${s.gh_repo}/contents/dist/last-ai-result.json?ref=${encodeURIComponent(s.gh_branch)}&t=${Date.now()}`;
+    let beforeTs = "";
     try {
-      const rl = await ghApi(`/repos/${s.gh_repo}/actions/runs?per_page=5`);
-      beforeId = (rl.workflow_runs||[]).reduce((m,r)=>Math.max(m,r.id),0);
+      const f0 = await ghApi(fileUrl);
+      beforeTs = (JSON.parse(b64decode(f0.content)) || {}).ts || "";
     } catch(e){}
     const history = state.messages.slice(0,-1).slice(-6).map(m=>({role:m.role, content:m.content}));
-    await ghApi(`/repos/${s.gh_repo}/actions/workflows/ai-assist.yml/dispatches`, {
+    await ghApi(`/repos/${s.gh_repo}/dispatches`, {
       method: "POST",
       headers: {"Content-Type": "application/json"},
-      body: JSON.stringify({ref: s.gh_branch, inputs: {message: text, history: JSON.stringify(history)}}),
+      body: JSON.stringify({
+        event_type: "ai-assist",
+        client_payload: {message: text, history: JSON.stringify(history)},
+      }),
     });
-    setStatus("已触发云端 AI，等待启动…");
-    let runId = 0;
-    for (let i=0;i<24 && !runId;i++){
+    setStatus("云端 AI 已启动，运行中…");
+    let res = null;
+    for (let i=0;i<48;i++){
       await new Promise(r=>setTimeout(r,5000));
-      const rl = await ghApi(`/repos/${s.gh_repo}/actions/runs?per_page=10`);
-      const r = (rl.workflow_runs||[]).find(x=>x.id>beforeId && x.name==="AI rule assist");
-      if (r) runId = r.id;
-      else if (i%3===2) setStatus(`等待云端 AI 启动…`);
+      setStatus(`云端 AI 运行中… (${(i+1)*5}s)`);
+      try {
+        const f = await ghApi(`/repos/${s.gh_repo}/contents/dist/last-ai-result.json?ref=${encodeURIComponent(s.gh_branch)}&t=${Date.now()}`);
+        const j = JSON.parse(b64decode(f.content));
+        if (j && j.ts && j.ts !== beforeTs){ res = j; break; }
+      } catch(e){}
     }
-    if (!runId) throw new Error("未能找到云端运行任务（请确认仓库里存在 ai-assist.yml 工作流）");
-    let done = false;
-    for (let i=0;i<60 && !done;i++){
-      await new Promise(r=>setTimeout(r,5000));
-      const run = await ghApi(`/repos/${s.gh_repo}/actions/runs/${runId}`);
-      done = run.status === "completed";
-      setStatus(`云端 AI 运行中（${run.status}）…`);
-    }
-    const runObj = await ghApi(`/repos/${s.gh_repo}/actions/runs/${runId}`);
-    if (runObj.conclusion !== "success") throw new Error("云端运行失败：" + (runObj.conclusion||"unknown"));
-    const f = await ghApi(`/repos/${s.gh_repo}/contents/dist/last-ai-result.json?ref=${encodeURIComponent(s.gh_branch)}&t=${Date.now()}`);
-    const res = JSON.parse(b64decode(f.content));
+    if (!res) throw new Error("等待云端结果超时（约 4 分钟），请稍后在仓库 dist/last-ai-result.json 查看");
     if (!res.ok) throw new Error("云端 AI 出错：" + (res.error||"未知错误"));
     state.messages.push({role:"assistant", content: res.reply});
     let html = fmtMd(res.reply);
