@@ -71,7 +71,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: xiuonUfezotBv00goOWWkrK8IZ-ZeE5uw20tAmsKCAQ
-    short-id: 9e36ab55725bd702
+    short-id: d9d538d224181dc3
   client-fingerprint: chrome
 - name: 将在 10-12 恢复 (California (美国) A20)
   type: vless
@@ -86,7 +86,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: NJqL8WJKrZXQzJFOGtmxywyLnNLFF3wTg_AUxft_dQQ
-    short-id: 5277acf5b0bc157d
+    short-id: 147f2c5fd8af7380
   client-fingerprint: chrome
 - name: 将在 10-03 恢复 (California (美国) B09)
   type: vless
@@ -131,7 +131,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: HKf6MnsbZcwuFfJ7MZU2Wbqg24aH8v1cZfgVUsNJsCk
-    short-id: 9b29b7e52b4c84e3
+    short-id: 75edf615591bca16
   client-fingerprint: chrome
 - name: 将在 10-03 恢复 (California (美国) B10 (IPv6))
   type: vless
@@ -146,7 +146,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: HKf6MnsbZcwuFfJ7MZU2Wbqg24aH8v1cZfgVUsNJsCk
-    short-id: 9b29b7e52b4c84e3
+    short-id: 75edf615591bca16
   client-fingerprint: chrome
 - name: 将在 10-03 恢复 (California (美国) B11)
   type: vless
@@ -251,7 +251,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: TO1goiQ7rNvN1AELFtyUFhk1D8xibX63opdKMLKRJno
-    short-id: f2523df1f4cc9ddb
+    short-id: 00540b4ab0ed15b7
   client-fingerprint: chrome
 - name: California (美国) E06【故障】
   type: vless
@@ -266,7 +266,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: 3A8ErnGGxMUG0DDzQ-LTt1f2ZI_H8gUn-7DUXPVxaDg
-    short-id: bb2b8c49fe154178
+    short-id: 388524e43e293179
   client-fingerprint: chrome
 - name: California (美国) G05【故障】
   type: vless
@@ -335,7 +335,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: 3jFhcTDJtEiy0ScP-9Qk5BMv4WHu10hyodfLtgRhNhw
-    short-id: 3cc2d2ece37a5302
+    short-id: 0d2c5f6704ececbd
   client-fingerprint: chrome
 - name: China Taiwan A01【故障】
   type: anytls
@@ -374,7 +374,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: DtDRl5uBVO1O-rNh4jZXOH0GjSM-uus9k4C218ACq0g
-    short-id: c11cf1793aa87c6d
+    short-id: 3e12b20e892c5610
   client-fingerprint: chrome
 - name: China Taiwan B03
   type: vless
@@ -389,7 +389,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: DtDRl5uBVO1O-rNh4jZXOH0GjSM-uus9k4C218ACq0g
-    short-id: c11cf1793aa87c6d
+    short-id: 3e12b20e892c5610
   client-fingerprint: chrome
 - name: China Taiwan C01
   type: vless
@@ -404,7 +404,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: slCwU43XWaY9DhwlACGs_whHIak6qNI2FyxpWKLyC3U
-    short-id: 285fdc69077e805e
+    short-id: e1a1e4662d6fed61
   client-fingerprint: chrome
 - name: China Taiwan C02
   type: vless
@@ -419,7 +419,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: GhjDU5Dqacn0axV9Qogkog28xjEOATL5dURb1jUClkU
-    short-id: c5379dead24f7352
+    short-id: c75af2e3bb7ad404
   client-fingerprint: chrome
 - name: China Taiwan C03
   type: vless
@@ -503,7 +503,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: wcPdO7vLuyl09T7caPDKdigJVCavhU-d2DP2ihTumh4
-    short-id: 5e21ea42c0cea033
+    short-id: a0678c8fad913064
   client-fingerprint: chrome
 - name: Hong Kong C01
   type: vless
@@ -556,7 +556,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: qh0HBQmSSC6TGxwM4euJuYUvW7lE1VjdfJ-Ds9h96GQ
-    short-id: ee50cfcc4323e735
+    short-id: 10ed9cd61dec11a0
   client-fingerprint: chrome
 - name: Japan C01【故障】
   type: vless
@@ -621,7 +621,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: IGdV-Ki7JH-AEEC1oCEMmTtN5oVLXzpPE0c0gRXQKms
-    short-id: 6e16ab6d2c103273
+    short-id: 1faf7c598917e01c
   client-fingerprint: chrome
 - name: Japan E01【故障】 (IPv6)
   type: vless
@@ -636,7 +636,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: IGdV-Ki7JH-AEEC1oCEMmTtN5oVLXzpPE0c0gRXQKms
-    short-id: 6e16ab6d2c103273
+    short-id: 1faf7c598917e01c
   client-fingerprint: chrome
 - name: Japan F02
   type: anytls
@@ -674,7 +674,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: fu_PpIuMxYIWjgaTjGg-er00oBnFp0CXr22-0hH72FQ
-    short-id: 7dc502cffda808c1
+    short-id: 469b11e196325f77
   client-fingerprint: chrome
 - name: Russia B02【故障】 (IPv6)
   type: vless
@@ -689,7 +689,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: fu_PpIuMxYIWjgaTjGg-er00oBnFp0CXr22-0hH72FQ
-    short-id: 7dc502cffda808c1
+    short-id: 469b11e196325f77
   client-fingerprint: chrome
 - name: Z 土耳其01 (香港中转)
   type: trojan
@@ -744,7 +744,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: wcPdO7vLuyl09T7caPDKdigJVCavhU-d2DP2ihTumh4
-    short-id: 5e21ea42c0cea033
+    short-id: a0678c8fad913064
   client-fingerprint: chrome
 - name: Z 德国B01【故障】
   type: vless
@@ -759,7 +759,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: wcPdO7vLuyl09T7caPDKdigJVCavhU-d2DP2ihTumh4
-    short-id: 5e21ea42c0cea033
+    short-id: a0678c8fad913064
   client-fingerprint: chrome
 - name: Z 意大利A01 (IPv6)
   type: trojan
@@ -771,7 +771,7 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: mygrpc
-- name: Z 意大利A02
+- name: Z 意大利A02【故障】
   type: vless
   server: ita02.nwncd.com
   port: 443
@@ -784,7 +784,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: PiGBZboC9WgtwjIET6EVvrchq5gGcxeU_Jb5BN10rmg
-    short-id: 66cbea1291f3744e
+    short-id: 0bb0d7173275f469
   client-fingerprint: chrome
 - name: Z 新加坡A02
   type: vless
@@ -859,7 +859,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: z6y1rdSOlReq1JA5ruOtXwnI0OgGDoHf5rlGpNVBZlw
-    short-id: 8abc8fcb05cf0a68
+    short-id: 59ca2bd2257f4127
   client-fingerprint: chrome
 - name: Z 澳大利亚A01 (台湾中转)
   type: vless
@@ -874,7 +874,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: z6y1rdSOlReq1JA5ruOtXwnI0OgGDoHf5rlGpNVBZlw
-    short-id: 8abc8fcb05cf0a68
+    short-id: 59ca2bd2257f4127
   client-fingerprint: chrome
 - name: Z 澳大利亚A01 (IPv6)
   type: vless
@@ -889,7 +889,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: z6y1rdSOlReq1JA5ruOtXwnI0OgGDoHf5rlGpNVBZlw
-    short-id: 8abc8fcb05cf0a68
+    short-id: 59ca2bd2257f4127
   client-fingerprint: chrome
 - name: Z 澳大利亚A02
   type: vless
@@ -949,7 +949,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: 7f6j5ahpML_OzWx7N3Ijrmz5otsNvCSmMWRuGkHbpD4
-    short-id: 882db48279e05da3
+    short-id: 808a00af47b053c2
   client-fingerprint: chrome
 - name: Z 澳大利亚B01 (台湾中转)
   type: vless
@@ -964,7 +964,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: 7f6j5ahpML_OzWx7N3Ijrmz5otsNvCSmMWRuGkHbpD4
-    short-id: 882db48279e05da3
+    short-id: 808a00af47b053c2
   client-fingerprint: chrome
 - name: Z 英国 A01
   type: trojan
@@ -1088,7 +1088,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: wcPdO7vLuyl09T7caPDKdigJVCavhU-d2DP2ihTumh4
-    short-id: 5e21ea42c0cea033
+    short-id: a0678c8fad913064
   client-fingerprint: chrome
 - name: Z 马来西亚A01
   type: trojan
@@ -1123,7 +1123,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: ja5nSqjg-8D4hpeQeh_VyMmKtTpYNDw5tpWCkYOG1y4
-    short-id: 7d95360c666cd7d1
+    short-id: dfa43478f1729bd4
   client-fingerprint: chrome
 - name: Z 马来西亚A02 (台湾中转)
   type: vless
@@ -1138,7 +1138,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: ja5nSqjg-8D4hpeQeh_VyMmKtTpYNDw5tpWCkYOG1y4
-    short-id: 7d95360c666cd7d1
+    short-id: dfa43478f1729bd4
   client-fingerprint: chrome
 proxy-groups:
 - name: 🔰 节点选择
@@ -1205,7 +1205,7 @@ proxy-groups:
   - Z 德国A01【故障】
   - Z 德国B01【故障】
   - Z 意大利A01 (IPv6)
-  - Z 意大利A02
+  - Z 意大利A02【故障】
   - Z 新加坡A02
   - Z 新加坡A02 (香港中转)
   - Z 新加坡A02 (IPv6)
@@ -1298,7 +1298,7 @@ proxy-groups:
   - Z 德国A01【故障】
   - Z 德国B01【故障】
   - Z 意大利A01 (IPv6)
-  - Z 意大利A02
+  - Z 意大利A02【故障】
   - Z 新加坡A02
   - Z 新加坡A02 (香港中转)
   - Z 新加坡A02 (IPv6)
@@ -1392,7 +1392,7 @@ proxy-groups:
   - Z 德国A01【故障】
   - Z 德国B01【故障】
   - Z 意大利A01 (IPv6)
-  - Z 意大利A02
+  - Z 意大利A02【故障】
   - Z 新加坡A02
   - Z 新加坡A02 (香港中转)
   - Z 新加坡A02 (IPv6)
@@ -1498,7 +1498,7 @@ proxy-groups:
   - Z 德国A01【故障】
   - Z 德国B01【故障】
   - Z 意大利A01 (IPv6)
-  - Z 意大利A02
+  - Z 意大利A02【故障】
   - Z 新加坡A02
   - Z 新加坡A02 (香港中转)
   - Z 新加坡A02 (IPv6)
@@ -1596,7 +1596,7 @@ proxy-groups:
   - Z 德国A01【故障】
   - Z 德国B01【故障】
   - Z 意大利A01 (IPv6)
-  - Z 意大利A02
+  - Z 意大利A02【故障】
   - Z 新加坡A02
   - Z 新加坡A02 (香港中转)
   - Z 新加坡A02 (IPv6)
@@ -1689,7 +1689,7 @@ proxy-groups:
   - Z 德国A01【故障】
   - Z 德国B01【故障】
   - Z 意大利A01 (IPv6)
-  - Z 意大利A02
+  - Z 意大利A02【故障】
   - Z 新加坡A02
   - Z 新加坡A02 (香港中转)
   - Z 新加坡A02 (IPv6)
@@ -1783,7 +1783,7 @@ proxy-groups:
   - Z 德国A01【故障】
   - Z 德国B01【故障】
   - Z 意大利A01 (IPv6)
-  - Z 意大利A02
+  - Z 意大利A02【故障】
   - Z 新加坡A02
   - Z 新加坡A02 (香港中转)
   - Z 新加坡A02 (IPv6)
@@ -1886,7 +1886,7 @@ proxy-groups:
   - Z 德国A01【故障】
   - Z 德国B01【故障】
   - Z 意大利A01 (IPv6)
-  - Z 意大利A02
+  - Z 意大利A02【故障】
   - Z 新加坡A02
   - Z 新加坡A02 (香港中转)
   - Z 新加坡A02 (IPv6)
@@ -1962,7 +1962,7 @@ proxy-groups:
   - Z 德国A01【故障】
   - Z 德国B01【故障】
   - Z 意大利A01 (IPv6)
-  - Z 意大利A02
+  - Z 意大利A02【故障】
   - Z 新加坡A02
   - Z 新加坡A02 (香港中转)
   - Z 新加坡A02 (IPv6)
@@ -2003,7 +2003,6 @@ proxy-groups:
   - California (美国) H04【故障】
   - California (美国) H10【故障】
   - China Taiwan A01【故障】
-  - China Taiwan B01
   - China Taiwan B03
   - China Taiwan C01
   - China Taiwan C03
@@ -2083,7 +2082,7 @@ proxy-groups:
   - Z 德国A01【故障】
   - Z 德国B01【故障】
   - Z 意大利A01 (IPv6)
-  - Z 意大利A02
+  - Z 意大利A02【故障】
   - Z 新加坡A02
   - Z 新加坡A02 (香港中转)
   - Z 新加坡A02 (IPv6)
