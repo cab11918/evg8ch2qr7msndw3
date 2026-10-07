@@ -86,7 +86,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: HKf6MnsbZcwuFfJ7MZU2Wbqg24aH8v1cZfgVUsNJsCk
-    short-id: 9b29b7e52b4c84e3
+    short-id: 75edf615591bca16
   client-fingerprint: chrome
 - name: California (美国) B10 (IPv6)
   type: vless
@@ -101,7 +101,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: HKf6MnsbZcwuFfJ7MZU2Wbqg24aH8v1cZfgVUsNJsCk
-    short-id: 9b29b7e52b4c84e3
+    short-id: 75edf615591bca16
   client-fingerprint: chrome
 - name: California (美国) E05
   type: vless
@@ -116,9 +116,9 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: TO1goiQ7rNvN1AELFtyUFhk1D8xibX63opdKMLKRJno
-    short-id: f2523df1f4cc9ddb
+    short-id: 00540b4ab0ed15b7
   client-fingerprint: chrome
-- name: 将在 10-19 恢复 (California (美国) G06)
+- name: California (美国) G06
   type: anytls
   server: usg06.nwncd.com
   port: 8443
@@ -126,7 +126,7 @@ proxies:
   sni: usg06.nwncd.com
   client-fingerprint: chrome
   udp: true
-- name: 将在 10-19 恢复 (California (美国) G06 (IPv6))
+- name: California (美国) G06 (IPv6)
   type: anytls
   server: usg06-ipv6.nwncd.com
   port: 8443
@@ -147,7 +147,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: CMQAYxGIg6jKAlQOYKFsbH92rCj_7y93Wq15GKArdX4
-    short-id: 7166cb1da0a84871
+    short-id: f101b656f8900b4c
   client-fingerprint: chrome
 - name: China Taiwan A01
   type: anytls
@@ -231,7 +231,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: GhjDU5Dqacn0axV9Qogkog28xjEOATL5dURb1jUClkU
-    short-id: c5379dead24f7352
+    short-id: c75af2e3bb7ad404
   client-fingerprint: chrome
 - name: China Taiwan C03
   type: vless
@@ -246,7 +246,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: 0vhHyG42ascLgUd8-qzkS2p1pAgI8tYWxA0T1kpSLgQ
-    short-id: dee9ed01d837ef98
+    short-id: 45029c8438f234fa
   client-fingerprint: chrome
 - name: China Taiwan D01
   type: anytls
@@ -272,9 +272,32 @@ proxies:
   sni: twd02.nwncd.com
   client-fingerprint: chrome
   udp: true
+- name: China Taiwan D02【故障】 (IPv6)
+  type: anytls
+  server: twd02-ipv6.nwncd.com
+  port: 443
+  password: laVwQaS5xkjDc3u4
+  sni: twd02.nwncd.com
+  client-fingerprint: chrome
+  udp: true
 - name: China Taiwan E03
   type: vless
   server: twe03.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: blueboy785-nas.synology.me
+  skip-cert-verify: false
+  reality-opts:
+    public-key: WaUD5xc_5v784vAONkLPh22t834Z1DaMRxZc_qUf7iA
+    short-id: ef83771d977da76b
+  client-fingerprint: chrome
+- name: China Taiwan E03 (IPv6)
+  type: vless
+  server: twe03-ipv6.nwncd.com
   port: 443
   uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
   flow: xtls-rprx-vision
@@ -368,26 +391,11 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: qh0HBQmSSC6TGxwM4euJuYUvW7lE1VjdfJ-Ds9h96GQ
-    short-id: ee50cfcc4323e735
+    short-id: 10ed9cd61dec11a0
   client-fingerprint: chrome
 - name: Japan C01【故障】
   type: vless
   server: jpc01.nwncd.com
-  port: 443
-  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
-  flow: xtls-rprx-vision
-  tls: true
-  udp: true
-  network: tcp
-  servername: hexii.org
-  skip-cert-verify: false
-  reality-opts:
-    public-key: 0ZTdFJGgnJCBeNfGL4-yw0rrbPgOzKCZKBtBX7ZjHz8
-    short-id: 01e6b85dbb73b665
-  client-fingerprint: chrome
-- name: Japan C01【故障】 (IPv6)
-  type: vless
-  server: jpc01-ipv6.nwncd.com
   port: 443
   uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
   flow: xtls-rprx-vision
@@ -446,7 +454,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: m6yp0s7JslbRrrYjw0kHehpskMmDG88IHmaV3LxGgG0
-    short-id: 5d65ffa79ad31c03
+    short-id: b790750858f681ad
   client-fingerprint: chrome
 - name: Russia B02 (IPv6)
   type: vless
@@ -461,7 +469,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: fu_PpIuMxYIWjgaTjGg-er00oBnFp0CXr22-0hH72FQ
-    short-id: 469b11e196325f77
+    short-id: 7dc502cffda808c1
   client-fingerprint: chrome
 - name: Z 土耳其01 (香港中转)
   type: trojan
@@ -516,7 +524,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: wcPdO7vLuyl09T7caPDKdigJVCavhU-d2DP2ihTumh4
-    short-id: 5e21ea42c0cea033
+    short-id: a0678c8fad913064
   client-fingerprint: chrome
 - name: Z 德国B01
   type: vless
@@ -531,7 +539,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: wcPdO7vLuyl09T7caPDKdigJVCavhU-d2DP2ihTumh4
-    short-id: 5e21ea42c0cea033
+    short-id: a0678c8fad913064
   client-fingerprint: chrome
 - name: Z 德国B01 (IPv6)
   type: vless
@@ -546,18 +554,8 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: wcPdO7vLuyl09T7caPDKdigJVCavhU-d2DP2ihTumh4
-    short-id: 5e21ea42c0cea033
+    short-id: a0678c8fad913064
   client-fingerprint: chrome
-- name: Z 意大利A01【故障】 (IPv6)
-  type: trojan
-  server: ita01-ipv6.nwncd.com
-  port: 35322
-  password: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
-  sni: ita01.nwncd.com
-  udp: true
-  network: grpc
-  grpc-opts:
-    grpc-service-name: mygrpc
 - name: Z 意大利A02【故障】
   type: vless
   server: ita02.nwncd.com
@@ -571,7 +569,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: PiGBZboC9WgtwjIET6EVvrchq5gGcxeU_Jb5BN10rmg
-    short-id: 0bb0d7173275f469
+    short-id: 66cbea1291f3744e
   client-fingerprint: chrome
 - name: Z 新加坡A02 (香港中转)
   type: vless
@@ -586,7 +584,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: pTdxZcMK82pJKcTcdn3TCWnTNBY013tkh4A9usOzMjk
-    short-id: d63fb08c3b296103
+    short-id: fa72588c1ac29406
   client-fingerprint: chrome
 - name: Z 新加坡A02 (IPv6)
   type: vless
@@ -601,7 +599,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: pTdxZcMK82pJKcTcdn3TCWnTNBY013tkh4A9usOzMjk
-    short-id: d63fb08c3b296103
+    short-id: fa72588c1ac29406
   client-fingerprint: chrome
 - name: Z 新加坡A04【故障】
   type: vless
@@ -631,7 +629,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: z6y1rdSOlReq1JA5ruOtXwnI0OgGDoHf5rlGpNVBZlw
-    short-id: 8abc8fcb05cf0a68
+    short-id: 59ca2bd2257f4127
   client-fingerprint: chrome
 - name: Z 澳大利亚A01 (IPv6)
   type: vless
@@ -646,7 +644,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: z6y1rdSOlReq1JA5ruOtXwnI0OgGDoHf5rlGpNVBZlw
-    short-id: 8abc8fcb05cf0a68
+    short-id: 59ca2bd2257f4127
   client-fingerprint: chrome
 - name: 将在 10-12 恢复 (Z 澳大利亚A02【故障】)
   type: vless
@@ -706,7 +704,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: 7f6j5ahpML_OzWx7N3Ijrmz5otsNvCSmMWRuGkHbpD4
-    short-id: 882db48279e05da3
+    short-id: 808a00af47b053c2
   client-fingerprint: chrome
 - name: Z 澳大利亚B01 (台湾中转)
   type: vless
@@ -721,7 +719,22 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: 7f6j5ahpML_OzWx7N3Ijrmz5otsNvCSmMWRuGkHbpD4
-    short-id: 882db48279e05da3
+    short-id: 808a00af47b053c2
+  client-fingerprint: chrome
+- name: Z 澳大利亚B01 (IPv6)
+  type: vless
+  server: aub01-ipv6.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: www.sydney.edu.au
+  skip-cert-verify: false
+  reality-opts:
+    public-key: 7f6j5ahpML_OzWx7N3Ijrmz5otsNvCSmMWRuGkHbpD4
+    short-id: 808a00af47b053c2
   client-fingerprint: chrome
 - name: Z 英国 A01 (台湾中转)
   type: trojan
@@ -733,21 +746,6 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: mygrpc
-- name: Z 英国 A01 (reality)
-  type: vless
-  server: 212.86.104.36
-  port: 443
-  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
-  network: tcp
-  tls: true
-  udp: true
-  flow: xtls-rprx-vision
-  servername: tesla.com
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: isRWtB1nQJUSPsus7Fk48-HxSunfC_atGvn1pWCi5z4
-    short-id: e050ef9513818356
 - name: Z 英国 A01 (reality) (台湾中转)
   type: vless
   server: optimize-tw-relay.nwncd.com
@@ -849,6 +847,16 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: mygrpc
+- name: Z 马来西亚A01 (IPv6)
+  type: trojan
+  server: mya01-ipv6.nwncd.com
+  port: 35332
+  password: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  sni: mya01.nwncd.com
+  udp: true
+  network: grpc
+  grpc-opts:
+    grpc-service-name: mygrpc
 - name: Z 马来西亚A02 (台湾中转)
   type: vless
   server: optimize-tw-relay.nwncd.com
@@ -862,7 +870,22 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: ja5nSqjg-8D4hpeQeh_VyMmKtTpYNDw5tpWCkYOG1y4
-    short-id: 7d95360c666cd7d1
+    short-id: dfa43478f1729bd4
+  client-fingerprint: chrome
+- name: Z 马来西亚A02 (IPv6)
+  type: vless
+  server: mya02-ipv6.nwncd.com
+  port: 443
+  uuid: c3bcf03d-6ef0-32cc-aa58-908cb5ab53e0
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  network: tcp
+  servername: www.ukm.my
+  skip-cert-verify: false
+  reality-opts:
+    public-key: ja5nSqjg-8D4hpeQeh_VyMmKtTpYNDw5tpWCkYOG1y4
+    short-id: dfa43478f1729bd4
   client-fingerprint: chrome
 proxy-groups:
 - name: 🔰 节点选择
@@ -878,8 +901,8 @@ proxy-groups:
   - California (美国) B10
   - California (美国) B10 (IPv6)
   - California (美国) E05
-  - 将在 10-19 恢复 (California (美国) G06)
-  - 将在 10-19 恢复 (California (美国) G06 (IPv6))
+  - California (美国) G06
+  - California (美国) G06 (IPv6)
   - California (美国) H05
   - China Taiwan A01
   - China Taiwan B01
@@ -892,7 +915,9 @@ proxy-groups:
   - China Taiwan D01
   - China Taiwan D01 (IPv6)
   - China Taiwan D02【故障】
+  - China Taiwan D02【故障】 (IPv6)
   - China Taiwan E03
+  - China Taiwan E03 (IPv6)
   - D Series - HK 01【故障】
   - hktest03【故障】
   - Hong Kong C01【故障】
@@ -900,7 +925,6 @@ proxy-groups:
   - Japan A02
   - Japan B01【故障】
   - Japan C01【故障】
-  - Japan C01【故障】 (IPv6)
   - Japan D01 (IPv6)
   - Japan E01 (IPv6)
   - Japan F02
@@ -913,7 +937,6 @@ proxy-groups:
   - Z 德国A01【故障】
   - Z 德国B01
   - Z 德国B01 (IPv6)
-  - Z 意大利A01【故障】 (IPv6)
   - Z 意大利A02【故障】
   - Z 新加坡A02 (香港中转)
   - Z 新加坡A02 (IPv6)
@@ -925,8 +948,8 @@ proxy-groups:
   - 将在 10-12 恢复 (Z 澳大利亚A02【故障】 (IPv6))
   - Z 澳大利亚B01 (香港中转)
   - Z 澳大利亚B01 (台湾中转)
+  - Z 澳大利亚B01 (IPv6)
   - Z 英国 A01 (台湾中转)
-  - Z 英国 A01 (reality)
   - Z 英国 A01 (reality) (台湾中转)
   - Z 英国 B01
   - Z 英国 C02
@@ -936,7 +959,9 @@ proxy-groups:
   - Z 越南A01 (台湾中转)
   - Z 韩国B04
   - Z 马来西亚A01 (香港中转)
+  - Z 马来西亚A01 (IPv6)
   - Z 马来西亚A02 (台湾中转)
+  - Z 马来西亚A02 (IPv6)
 - name: ♻️ 自动选择
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -950,8 +975,8 @@ proxy-groups:
   - California (美国) B10
   - California (美国) B10 (IPv6)
   - California (美国) E05
-  - 将在 10-19 恢复 (California (美国) G06)
-  - 将在 10-19 恢复 (California (美国) G06 (IPv6))
+  - California (美国) G06
+  - California (美国) G06 (IPv6)
   - California (美国) H05
   - China Taiwan A01
   - China Taiwan B01
@@ -964,7 +989,9 @@ proxy-groups:
   - China Taiwan D01
   - China Taiwan D01 (IPv6)
   - China Taiwan D02【故障】
+  - China Taiwan D02【故障】 (IPv6)
   - China Taiwan E03
+  - China Taiwan E03 (IPv6)
   - D Series - HK 01【故障】
   - hktest03【故障】
   - Hong Kong C01【故障】
@@ -972,7 +999,6 @@ proxy-groups:
   - Japan A02
   - Japan B01【故障】
   - Japan C01【故障】
-  - Japan C01【故障】 (IPv6)
   - Japan D01 (IPv6)
   - Japan E01 (IPv6)
   - Japan F02
@@ -985,7 +1011,6 @@ proxy-groups:
   - Z 德国A01【故障】
   - Z 德国B01
   - Z 德国B01 (IPv6)
-  - Z 意大利A01【故障】 (IPv6)
   - Z 意大利A02【故障】
   - Z 新加坡A02 (香港中转)
   - Z 新加坡A02 (IPv6)
@@ -997,8 +1022,8 @@ proxy-groups:
   - 将在 10-12 恢复 (Z 澳大利亚A02【故障】 (IPv6))
   - Z 澳大利亚B01 (香港中转)
   - Z 澳大利亚B01 (台湾中转)
+  - Z 澳大利亚B01 (IPv6)
   - Z 英国 A01 (台湾中转)
-  - Z 英国 A01 (reality)
   - Z 英国 A01 (reality) (台湾中转)
   - Z 英国 B01
   - Z 英国 C02
@@ -1008,7 +1033,9 @@ proxy-groups:
   - Z 越南A01 (台湾中转)
   - Z 韩国B04
   - Z 马来西亚A01 (香港中转)
+  - Z 马来西亚A01 (IPv6)
   - Z 马来西亚A02 (台湾中转)
+  - Z 马来西亚A02 (IPv6)
 - name: 🎥 NETFLIX
   type: select
   proxies:
@@ -1023,8 +1050,8 @@ proxy-groups:
   - California (美国) B10
   - California (美国) B10 (IPv6)
   - California (美国) E05
-  - 将在 10-19 恢复 (California (美国) G06)
-  - 将在 10-19 恢复 (California (美国) G06 (IPv6))
+  - California (美国) G06
+  - California (美国) G06 (IPv6)
   - California (美国) H05
   - China Taiwan A01
   - China Taiwan B01
@@ -1037,7 +1064,9 @@ proxy-groups:
   - China Taiwan D01
   - China Taiwan D01 (IPv6)
   - China Taiwan D02【故障】
+  - China Taiwan D02【故障】 (IPv6)
   - China Taiwan E03
+  - China Taiwan E03 (IPv6)
   - D Series - HK 01【故障】
   - hktest03【故障】
   - Hong Kong C01【故障】
@@ -1045,7 +1074,6 @@ proxy-groups:
   - Japan A02
   - Japan B01【故障】
   - Japan C01【故障】
-  - Japan C01【故障】 (IPv6)
   - Japan D01 (IPv6)
   - Japan E01 (IPv6)
   - Japan F02
@@ -1058,7 +1086,6 @@ proxy-groups:
   - Z 德国A01【故障】
   - Z 德国B01
   - Z 德国B01 (IPv6)
-  - Z 意大利A01【故障】 (IPv6)
   - Z 意大利A02【故障】
   - Z 新加坡A02 (香港中转)
   - Z 新加坡A02 (IPv6)
@@ -1070,8 +1097,8 @@ proxy-groups:
   - 将在 10-12 恢复 (Z 澳大利亚A02【故障】 (IPv6))
   - Z 澳大利亚B01 (香港中转)
   - Z 澳大利亚B01 (台湾中转)
+  - Z 澳大利亚B01 (IPv6)
   - Z 英国 A01 (台湾中转)
-  - Z 英国 A01 (reality)
   - Z 英国 A01 (reality) (台湾中转)
   - Z 英国 B01
   - Z 英国 C02
@@ -1081,7 +1108,9 @@ proxy-groups:
   - Z 越南A01 (台湾中转)
   - Z 韩国B04
   - Z 马来西亚A01 (香港中转)
+  - Z 马来西亚A01 (IPv6)
   - Z 马来西亚A02 (台湾中转)
+  - Z 马来西亚A02 (IPv6)
 - name: ⛔️ 广告拦截
   type: select
   proxies:
@@ -1108,8 +1137,8 @@ proxy-groups:
   - California (美国) B10
   - California (美国) B10 (IPv6)
   - California (美国) E05
-  - 将在 10-19 恢复 (California (美国) G06)
-  - 将在 10-19 恢复 (California (美国) G06 (IPv6))
+  - California (美国) G06
+  - California (美国) G06 (IPv6)
   - California (美国) H05
   - China Taiwan A01
   - China Taiwan B01
@@ -1122,7 +1151,9 @@ proxy-groups:
   - China Taiwan D01
   - China Taiwan D01 (IPv6)
   - China Taiwan D02【故障】
+  - China Taiwan D02【故障】 (IPv6)
   - China Taiwan E03
+  - China Taiwan E03 (IPv6)
   - D Series - HK 01【故障】
   - hktest03【故障】
   - Hong Kong C01【故障】
@@ -1130,7 +1161,6 @@ proxy-groups:
   - Japan A02
   - Japan B01【故障】
   - Japan C01【故障】
-  - Japan C01【故障】 (IPv6)
   - Japan D01 (IPv6)
   - Japan E01 (IPv6)
   - Japan F02
@@ -1143,7 +1173,6 @@ proxy-groups:
   - Z 德国A01【故障】
   - Z 德国B01
   - Z 德国B01 (IPv6)
-  - Z 意大利A01【故障】 (IPv6)
   - Z 意大利A02【故障】
   - Z 新加坡A02 (香港中转)
   - Z 新加坡A02 (IPv6)
@@ -1155,8 +1184,8 @@ proxy-groups:
   - 将在 10-12 恢复 (Z 澳大利亚A02【故障】 (IPv6))
   - Z 澳大利亚B01 (香港中转)
   - Z 澳大利亚B01 (台湾中转)
+  - Z 澳大利亚B01 (IPv6)
   - Z 英国 A01 (台湾中转)
-  - Z 英国 A01 (reality)
   - Z 英国 A01 (reality) (台湾中转)
   - Z 英国 B01
   - Z 英国 C02
@@ -1166,7 +1195,9 @@ proxy-groups:
   - Z 越南A01 (台湾中转)
   - Z 韩国B04
   - Z 马来西亚A01 (香港中转)
+  - Z 马来西亚A01 (IPv6)
   - Z 马来西亚A02 (台湾中转)
+  - Z 马来西亚A02 (IPv6)
 - name: 🌏 国内媒体
   type: select
   proxies:
@@ -1185,8 +1216,8 @@ proxy-groups:
   - California (美国) B10
   - California (美国) B10 (IPv6)
   - California (美国) E05
-  - 将在 10-19 恢复 (California (美国) G06)
-  - 将在 10-19 恢复 (California (美国) G06 (IPv6))
+  - California (美国) G06
+  - California (美国) G06 (IPv6)
   - California (美国) H05
   - China Taiwan A01
   - China Taiwan B01
@@ -1199,7 +1230,9 @@ proxy-groups:
   - China Taiwan D01
   - China Taiwan D01 (IPv6)
   - China Taiwan D02【故障】
+  - China Taiwan D02【故障】 (IPv6)
   - China Taiwan E03
+  - China Taiwan E03 (IPv6)
   - D Series - HK 01【故障】
   - hktest03【故障】
   - Hong Kong C01【故障】
@@ -1207,7 +1240,6 @@ proxy-groups:
   - Japan A02
   - Japan B01【故障】
   - Japan C01【故障】
-  - Japan C01【故障】 (IPv6)
   - Japan D01 (IPv6)
   - Japan E01 (IPv6)
   - Japan F02
@@ -1220,7 +1252,6 @@ proxy-groups:
   - Z 德国A01【故障】
   - Z 德国B01
   - Z 德国B01 (IPv6)
-  - Z 意大利A01【故障】 (IPv6)
   - Z 意大利A02【故障】
   - Z 新加坡A02 (香港中转)
   - Z 新加坡A02 (IPv6)
@@ -1232,8 +1263,8 @@ proxy-groups:
   - 将在 10-12 恢复 (Z 澳大利亚A02【故障】 (IPv6))
   - Z 澳大利亚B01 (香港中转)
   - Z 澳大利亚B01 (台湾中转)
+  - Z 澳大利亚B01 (IPv6)
   - Z 英国 A01 (台湾中转)
-  - Z 英国 A01 (reality)
   - Z 英国 A01 (reality) (台湾中转)
   - Z 英国 B01
   - Z 英国 C02
@@ -1243,7 +1274,9 @@ proxy-groups:
   - Z 越南A01 (台湾中转)
   - Z 韩国B04
   - Z 马来西亚A01 (香港中转)
+  - Z 马来西亚A01 (IPv6)
   - Z 马来西亚A02 (台湾中转)
+  - Z 马来西亚A02 (IPv6)
 - name: 📲 电报信息
   type: select
   proxies:
@@ -1257,8 +1290,8 @@ proxy-groups:
   - California (美国) B10
   - California (美国) B10 (IPv6)
   - California (美国) E05
-  - 将在 10-19 恢复 (California (美国) G06)
-  - 将在 10-19 恢复 (California (美国) G06 (IPv6))
+  - California (美国) G06
+  - California (美国) G06 (IPv6)
   - California (美国) H05
   - China Taiwan A01
   - China Taiwan B01
@@ -1271,7 +1304,9 @@ proxy-groups:
   - China Taiwan D01
   - China Taiwan D01 (IPv6)
   - China Taiwan D02【故障】
+  - China Taiwan D02【故障】 (IPv6)
   - China Taiwan E03
+  - China Taiwan E03 (IPv6)
   - D Series - HK 01【故障】
   - hktest03【故障】
   - Hong Kong C01【故障】
@@ -1279,7 +1314,6 @@ proxy-groups:
   - Japan A02
   - Japan B01【故障】
   - Japan C01【故障】
-  - Japan C01【故障】 (IPv6)
   - Japan D01 (IPv6)
   - Japan E01 (IPv6)
   - Japan F02
@@ -1292,7 +1326,6 @@ proxy-groups:
   - Z 德国A01【故障】
   - Z 德国B01
   - Z 德国B01 (IPv6)
-  - Z 意大利A01【故障】 (IPv6)
   - Z 意大利A02【故障】
   - Z 新加坡A02 (香港中转)
   - Z 新加坡A02 (IPv6)
@@ -1304,8 +1337,8 @@ proxy-groups:
   - 将在 10-12 恢复 (Z 澳大利亚A02【故障】 (IPv6))
   - Z 澳大利亚B01 (香港中转)
   - Z 澳大利亚B01 (台湾中转)
+  - Z 澳大利亚B01 (IPv6)
   - Z 英国 A01 (台湾中转)
-  - Z 英国 A01 (reality)
   - Z 英国 A01 (reality) (台湾中转)
   - Z 英国 B01
   - Z 英国 C02
@@ -1315,7 +1348,9 @@ proxy-groups:
   - Z 越南A01 (台湾中转)
   - Z 韩国B04
   - Z 马来西亚A01 (香港中转)
+  - Z 马来西亚A01 (IPv6)
   - Z 马来西亚A02 (台湾中转)
+  - Z 马来西亚A02 (IPv6)
 - name: 🍎 苹果服务
   type: select
   proxies:
@@ -1330,8 +1365,8 @@ proxy-groups:
   - California (美国) B10
   - California (美国) B10 (IPv6)
   - California (美国) E05
-  - 将在 10-19 恢复 (California (美国) G06)
-  - 将在 10-19 恢复 (California (美国) G06 (IPv6))
+  - California (美国) G06
+  - California (美国) G06 (IPv6)
   - California (美国) H05
   - China Taiwan A01
   - China Taiwan B01
@@ -1344,7 +1379,9 @@ proxy-groups:
   - China Taiwan D01
   - China Taiwan D01 (IPv6)
   - China Taiwan D02【故障】
+  - China Taiwan D02【故障】 (IPv6)
   - China Taiwan E03
+  - China Taiwan E03 (IPv6)
   - D Series - HK 01【故障】
   - hktest03【故障】
   - Hong Kong C01【故障】
@@ -1352,7 +1389,6 @@ proxy-groups:
   - Japan A02
   - Japan B01【故障】
   - Japan C01【故障】
-  - Japan C01【故障】 (IPv6)
   - Japan D01 (IPv6)
   - Japan E01 (IPv6)
   - Japan F02
@@ -1365,7 +1401,6 @@ proxy-groups:
   - Z 德国A01【故障】
   - Z 德国B01
   - Z 德国B01 (IPv6)
-  - Z 意大利A01【故障】 (IPv6)
   - Z 意大利A02【故障】
   - Z 新加坡A02 (香港中转)
   - Z 新加坡A02 (IPv6)
@@ -1377,8 +1412,8 @@ proxy-groups:
   - 将在 10-12 恢复 (Z 澳大利亚A02【故障】 (IPv6))
   - Z 澳大利亚B01 (香港中转)
   - Z 澳大利亚B01 (台湾中转)
+  - Z 澳大利亚B01 (IPv6)
   - Z 英国 A01 (台湾中转)
-  - Z 英国 A01 (reality)
   - Z 英国 A01 (reality) (台湾中转)
   - Z 英国 B01
   - Z 英国 C02
@@ -1388,7 +1423,9 @@ proxy-groups:
   - Z 越南A01 (台湾中转)
   - Z 韩国B04
   - Z 马来西亚A01 (香港中转)
+  - Z 马来西亚A01 (IPv6)
   - Z 马来西亚A02 (台湾中转)
+  - Z 马来西亚A02 (IPv6)
 - name: 🎯 全球直连
   type: select
   proxies:
@@ -1412,8 +1449,8 @@ proxy-groups:
   - California (美国) B10
   - California (美国) B10 (IPv6)
   - California (美国) E05
-  - 将在 10-19 恢复 (California (美国) G06)
-  - 将在 10-19 恢复 (California (美国) G06 (IPv6))
+  - California (美国) G06
+  - California (美国) G06 (IPv6)
   - California (美国) H05
   - China Taiwan A01
   - China Taiwan B01
@@ -1426,7 +1463,9 @@ proxy-groups:
   - China Taiwan D01
   - China Taiwan D01 (IPv6)
   - China Taiwan D02【故障】
+  - China Taiwan D02【故障】 (IPv6)
   - China Taiwan E03
+  - China Taiwan E03 (IPv6)
   - D Series - HK 01【故障】
   - hktest03【故障】
   - Hong Kong C01【故障】
@@ -1434,7 +1473,6 @@ proxy-groups:
   - Japan A02
   - Japan B01【故障】
   - Japan C01【故障】
-  - Japan C01【故障】 (IPv6)
   - Japan D01 (IPv6)
   - Japan E01 (IPv6)
   - Japan F02
@@ -1447,7 +1485,6 @@ proxy-groups:
   - Z 德国A01【故障】
   - Z 德国B01
   - Z 德国B01 (IPv6)
-  - Z 意大利A01【故障】 (IPv6)
   - Z 意大利A02【故障】
   - Z 新加坡A02 (香港中转)
   - Z 新加坡A02 (IPv6)
@@ -1459,8 +1496,8 @@ proxy-groups:
   - 将在 10-12 恢复 (Z 澳大利亚A02【故障】 (IPv6))
   - Z 澳大利亚B01 (香港中转)
   - Z 澳大利亚B01 (台湾中转)
+  - Z 澳大利亚B01 (IPv6)
   - Z 英国 A01 (台湾中转)
-  - Z 英国 A01 (reality)
   - Z 英国 A01 (reality) (台湾中转)
   - Z 英国 B01
   - Z 英国 C02
@@ -1470,7 +1507,9 @@ proxy-groups:
   - Z 越南A01 (台湾中转)
   - Z 韩国B04
   - Z 马来西亚A01 (香港中转)
+  - Z 马来西亚A01 (IPv6)
   - Z 马来西亚A02 (台湾中转)
+  - Z 马来西亚A02 (IPv6)
 - name: 🤖 OpenAI + Claude
   type: select
   proxies:
@@ -1481,6 +1520,8 @@ proxy-groups:
   - California (美国) B10
   - California (美国) B10 (IPv6)
   - California (美国) E05
+  - California (美国) G06
+  - California (美国) G06 (IPv6)
   - California (美国) H05
   - China Taiwan A01
   - China Taiwan B01
@@ -1493,11 +1534,12 @@ proxy-groups:
   - China Taiwan D01
   - China Taiwan D01 (IPv6)
   - China Taiwan D02【故障】
+  - China Taiwan D02【故障】 (IPv6)
   - China Taiwan E03
+  - China Taiwan E03 (IPv6)
   - Japan A02
   - Japan B01【故障】
   - Japan C01【故障】
-  - Japan C01【故障】 (IPv6)
   - Japan D01 (IPv6)
   - Japan E01 (IPv6)
   - Japan F02
@@ -1510,7 +1552,6 @@ proxy-groups:
   - Z 德国A01【故障】
   - Z 德国B01
   - Z 德国B01 (IPv6)
-  - Z 意大利A01【故障】 (IPv6)
   - Z 意大利A02【故障】
   - Z 新加坡A02 (香港中转)
   - Z 新加坡A02 (IPv6)
@@ -1519,8 +1560,8 @@ proxy-groups:
   - Z 澳大利亚A01 (IPv6)
   - Z 澳大利亚B01 (香港中转)
   - Z 澳大利亚B01 (台湾中转)
+  - Z 澳大利亚B01 (IPv6)
   - Z 英国 A01 (台湾中转)
-  - Z 英国 A01 (reality)
   - Z 英国 A01 (reality) (台湾中转)
   - Z 英国 B01
   - Z 英国 C02
@@ -1530,7 +1571,9 @@ proxy-groups:
   - Z 越南A01 (台湾中转)
   - Z 韩国B04
   - Z 马来西亚A01 (香港中转)
+  - Z 马来西亚A01 (IPv6)
   - Z 马来西亚A02 (台湾中转)
+  - Z 马来西亚A02 (IPv6)
 - name: 💡 Gemini + Google
   type: select
   proxies:
@@ -1538,6 +1581,7 @@ proxy-groups:
   - 🎯 全球直连
   - ♻️ 自动选择
   - California (美国) B10
+  - California (美国) G06
   - California (美国) H05
   - China Taiwan A01
   - China Taiwan B01
@@ -1569,8 +1613,8 @@ proxy-groups:
   - California (美国) B10
   - California (美国) B10 (IPv6)
   - California (美国) E05
-  - 将在 10-19 恢复 (California (美国) G06)
-  - 将在 10-19 恢复 (California (美国) G06 (IPv6))
+  - California (美国) G06
+  - California (美国) G06 (IPv6)
   - California (美国) H05
   - China Taiwan A01
   - China Taiwan B01
@@ -1583,7 +1627,9 @@ proxy-groups:
   - China Taiwan D01
   - China Taiwan D01 (IPv6)
   - China Taiwan D02【故障】
+  - China Taiwan D02【故障】 (IPv6)
   - China Taiwan E03
+  - China Taiwan E03 (IPv6)
   - D Series - HK 01【故障】
   - hktest03【故障】
   - Hong Kong C01【故障】
@@ -1591,7 +1637,6 @@ proxy-groups:
   - Japan A02
   - Japan B01【故障】
   - Japan C01【故障】
-  - Japan C01【故障】 (IPv6)
   - Japan D01 (IPv6)
   - Japan E01 (IPv6)
   - Japan F02
@@ -1604,7 +1649,6 @@ proxy-groups:
   - Z 德国A01【故障】
   - Z 德国B01
   - Z 德国B01 (IPv6)
-  - Z 意大利A01【故障】 (IPv6)
   - Z 意大利A02【故障】
   - Z 新加坡A02 (香港中转)
   - Z 新加坡A02 (IPv6)
@@ -1616,8 +1660,8 @@ proxy-groups:
   - 将在 10-12 恢复 (Z 澳大利亚A02【故障】 (IPv6))
   - Z 澳大利亚B01 (香港中转)
   - Z 澳大利亚B01 (台湾中转)
+  - Z 澳大利亚B01 (IPv6)
   - Z 英国 A01 (台湾中转)
-  - Z 英国 A01 (reality)
   - Z 英国 A01 (reality) (台湾中转)
   - Z 英国 B01
   - Z 英国 C02
@@ -1627,7 +1671,9 @@ proxy-groups:
   - Z 越南A01 (台湾中转)
   - Z 韩国B04
   - Z 马来西亚A01 (香港中转)
+  - Z 马来西亚A01 (IPv6)
   - Z 马来西亚A02 (台湾中转)
+  - Z 马来西亚A02 (IPv6)
 rules:
 - DOMAIN,local,🎯 全球直连
 - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
