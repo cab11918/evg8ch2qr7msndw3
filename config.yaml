@@ -73,7 +73,7 @@ proxies:
     public-key: xiuonUfezotBv00goOWWkrK8IZ-ZeE5uw20tAmsKCAQ
     short-id: d9d538d224181dc3
   client-fingerprint: chrome
-- name: California (美国) B10
+- name: 将在 11-03 恢复 (California (美国) B10)
   type: vless
   server: usb10.nwncd.com
   port: 443
@@ -88,7 +88,7 @@ proxies:
     public-key: HKf6MnsbZcwuFfJ7MZU2Wbqg24aH8v1cZfgVUsNJsCk
     short-id: 75edf615591bca16
   client-fingerprint: chrome
-- name: California (美国) B10 (IPv6)
+- name: 将在 11-03 恢复 (California (美国) B10 (IPv6))
   type: vless
   server: usb10-ipv6.nwncd.com
   port: 443
@@ -103,7 +103,7 @@ proxies:
     public-key: HKf6MnsbZcwuFfJ7MZU2Wbqg24aH8v1cZfgVUsNJsCk
     short-id: 75edf615591bca16
   client-fingerprint: chrome
-- name: California (美国) E05
+- name: California (美国) E05【故障】
   type: vless
   server: 38.71.116.14
   port: 443
@@ -147,7 +147,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: CMQAYxGIg6jKAlQOYKFsbH92rCj_7y93Wq15GKArdX4
-    short-id: f101b656f8900b4c
+    short-id: 7166cb1da0a84871
   client-fingerprint: chrome
 - name: China Taiwan A01【故障】
   type: anytls
@@ -216,7 +216,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: slCwU43XWaY9DhwlACGs_whHIak6qNI2FyxpWKLyC3U
-    short-id: e1a1e4662d6fed61
+    short-id: 285fdc69077e805e
   client-fingerprint: chrome
 - name: China Taiwan C02
   type: vless
@@ -246,7 +246,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: 0vhHyG42ascLgUd8-qzkS2p1pAgI8tYWxA0T1kpSLgQ
-    short-id: 45029c8438f234fa
+    short-id: dee9ed01d837ef98
   client-fingerprint: chrome
 - name: China Taiwan D01
   type: anytls
@@ -323,7 +323,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: zdWxb3Te_52N6HQfXDAh1vX9ytoNliORfvTF5OPESh0
-    short-id: 46507995d09e622a
+    short-id: d27aba52d12d7c5d
   client-fingerprint: chrome
 - name: hktest03【故障】
   type: vless
@@ -353,7 +353,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: uxk_b1c0CXi0mzpvhOorRrg2OjiwV4N4UvBZyV_nIS0
-    short-id: 71753f5e0d151ac2
+    short-id: 10202ebebca7fed1
   client-fingerprint: chrome
 - name: Hong Kong C01【故障】 (IPv6)
   type: vless
@@ -368,7 +368,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: uxk_b1c0CXi0mzpvhOorRrg2OjiwV4N4UvBZyV_nIS0
-    short-id: 71753f5e0d151ac2
+    short-id: 10202ebebca7fed1
   client-fingerprint: chrome
 - name: Japan A02
   type: anytls
@@ -391,7 +391,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: qh0HBQmSSC6TGxwM4euJuYUvW7lE1VjdfJ-Ds9h96GQ
-    short-id: ee50cfcc4323e735
+    short-id: 10ed9cd61dec11a0
   client-fingerprint: chrome
 - name: Japan C01【故障】
   type: vless
@@ -431,7 +431,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: IGdV-Ki7JH-AEEC1oCEMmTtN5oVLXzpPE0c0gRXQKms
-    short-id: 6e16ab6d2c103273
+    short-id: 1faf7c598917e01c
   client-fingerprint: chrome
 - name: Japan F02
   type: anytls
@@ -469,7 +469,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: fu_PpIuMxYIWjgaTjGg-er00oBnFp0CXr22-0hH72FQ
-    short-id: 7dc502cffda808c1
+    short-id: 469b11e196325f77
   client-fingerprint: chrome
 - name: Z 土耳其01 (香港中转)
   type: trojan
@@ -524,7 +524,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: wcPdO7vLuyl09T7caPDKdigJVCavhU-d2DP2ihTumh4
-    short-id: a0678c8fad913064
+    short-id: 5e21ea42c0cea033
   client-fingerprint: chrome
 - name: Z 德国B01
   type: vless
@@ -569,7 +569,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: PiGBZboC9WgtwjIET6EVvrchq5gGcxeU_Jb5BN10rmg
-    short-id: 66cbea1291f3744e
+    short-id: 0bb0d7173275f469
   client-fingerprint: chrome
 - name: Z 新加坡A02 (香港中转)
   type: vless
@@ -584,7 +584,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: pTdxZcMK82pJKcTcdn3TCWnTNBY013tkh4A9usOzMjk
-    short-id: fa72588c1ac29406
+    short-id: d63fb08c3b296103
   client-fingerprint: chrome
 - name: Z 新加坡A02 (IPv6)
   type: vless
@@ -599,7 +599,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: pTdxZcMK82pJKcTcdn3TCWnTNBY013tkh4A9usOzMjk
-    short-id: fa72588c1ac29406
+    short-id: d63fb08c3b296103
   client-fingerprint: chrome
 - name: Z 新加坡A04【故障】
   type: vless
@@ -614,7 +614,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: DojEZf7jejU4hR47gKxb902WKK7bK-Dpz3L02kB-JH0
-    short-id: 0c561fd111e05351
+    short-id: 284c64f07273dde2
   client-fingerprint: chrome
 - name: Z 澳大利亚A01 (台湾中转)
   type: vless
@@ -790,7 +790,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: spjJJHsOMo5mBb1IWtBEoQMHj9qL6U_OzJ2RyaKMdS8
-    short-id: cc41d001c3c05d88
+    short-id: baba966b48b35562
   client-fingerprint: chrome
 - name: Z 越南A01
   type: trojan
@@ -835,7 +835,7 @@ proxies:
   skip-cert-verify: false
   reality-opts:
     public-key: wcPdO7vLuyl09T7caPDKdigJVCavhU-d2DP2ihTumh4
-    short-id: a0678c8fad913064
+    short-id: 5e21ea42c0cea033
   client-fingerprint: chrome
 - name: Z 马来西亚A01 (香港中转)
   type: trojan
@@ -898,9 +898,9 @@ proxy-groups:
   - AC Series - HK 04
   - C Series - HK 29
   - 将在 10-16 恢复 (California (美国) A09)
-  - California (美国) B10
-  - California (美国) B10 (IPv6)
-  - California (美国) E05
+  - 将在 11-03 恢复 (California (美国) B10)
+  - 将在 11-03 恢复 (California (美国) B10 (IPv6))
+  - California (美国) E05【故障】
   - California (美国) G06
   - California (美国) G06 (IPv6)
   - California (美国) H05
@@ -972,9 +972,9 @@ proxy-groups:
   - AC Series - HK 04
   - C Series - HK 29
   - 将在 10-16 恢复 (California (美国) A09)
-  - California (美国) B10
-  - California (美国) B10 (IPv6)
-  - California (美国) E05
+  - 将在 11-03 恢复 (California (美国) B10)
+  - 将在 11-03 恢复 (California (美国) B10 (IPv6))
+  - California (美国) E05【故障】
   - California (美国) G06
   - California (美国) G06 (IPv6)
   - California (美国) H05
@@ -1047,9 +1047,9 @@ proxy-groups:
   - AC Series - HK 04
   - C Series - HK 29
   - 将在 10-16 恢复 (California (美国) A09)
-  - California (美国) B10
-  - California (美国) B10 (IPv6)
-  - California (美国) E05
+  - 将在 11-03 恢复 (California (美国) B10)
+  - 将在 11-03 恢复 (California (美国) B10 (IPv6))
+  - California (美国) E05【故障】
   - California (美国) G06
   - California (美国) G06 (IPv6)
   - California (美国) H05
@@ -1134,9 +1134,9 @@ proxy-groups:
   - AC Series - HK 04
   - C Series - HK 29
   - 将在 10-16 恢复 (California (美国) A09)
-  - California (美国) B10
-  - California (美国) B10 (IPv6)
-  - California (美国) E05
+  - 将在 11-03 恢复 (California (美国) B10)
+  - 将在 11-03 恢复 (California (美国) B10 (IPv6))
+  - California (美国) E05【故障】
   - California (美国) G06
   - California (美国) G06 (IPv6)
   - California (美国) H05
@@ -1213,9 +1213,9 @@ proxy-groups:
   - AC Series - HK 04
   - C Series - HK 29
   - 将在 10-16 恢复 (California (美国) A09)
-  - California (美国) B10
-  - California (美国) B10 (IPv6)
-  - California (美国) E05
+  - 将在 11-03 恢复 (California (美国) B10)
+  - 将在 11-03 恢复 (California (美国) B10 (IPv6))
+  - California (美国) E05【故障】
   - California (美国) G06
   - California (美国) G06 (IPv6)
   - California (美国) H05
@@ -1287,9 +1287,9 @@ proxy-groups:
   - AC Series - HK 04
   - C Series - HK 29
   - 将在 10-16 恢复 (California (美国) A09)
-  - California (美国) B10
-  - California (美国) B10 (IPv6)
-  - California (美国) E05
+  - 将在 11-03 恢复 (California (美国) B10)
+  - 将在 11-03 恢复 (California (美国) B10 (IPv6))
+  - California (美国) E05【故障】
   - California (美国) G06
   - California (美国) G06 (IPv6)
   - California (美国) H05
@@ -1362,9 +1362,9 @@ proxy-groups:
   - AC Series - HK 04
   - C Series - HK 29
   - 将在 10-16 恢复 (California (美国) A09)
-  - California (美国) B10
-  - California (美国) B10 (IPv6)
-  - California (美国) E05
+  - 将在 11-03 恢复 (California (美国) B10)
+  - 将在 11-03 恢复 (California (美国) B10 (IPv6))
+  - California (美国) E05【故障】
   - California (美国) G06
   - California (美国) G06 (IPv6)
   - California (美国) H05
@@ -1446,9 +1446,9 @@ proxy-groups:
   - AC Series - HK 04
   - C Series - HK 29
   - 将在 10-16 恢复 (California (美国) A09)
-  - California (美国) B10
-  - California (美国) B10 (IPv6)
-  - California (美国) E05
+  - 将在 11-03 恢复 (California (美国) B10)
+  - 将在 11-03 恢复 (California (美国) B10 (IPv6))
+  - California (美国) E05【故障】
   - California (美国) G06
   - California (美国) G06 (IPv6)
   - California (美国) H05
@@ -1517,9 +1517,7 @@ proxy-groups:
   - 🎯 全球直连
   - ♻️ 自动选择
   - 06 - US (美国)
-  - California (美国) B10
-  - California (美国) B10 (IPv6)
-  - California (美国) E05
+  - California (美国) E05【故障】
   - California (美国) G06
   - California (美国) G06 (IPv6)
   - California (美国) H05
@@ -1592,7 +1590,6 @@ proxy-groups:
   - China Taiwan C03
   - China Taiwan D02【故障】
   - China Taiwan E03
-  - Japan A02
   - Japan B01【故障】
   - Japan C01【故障】
   - Japan F02
@@ -1612,9 +1609,9 @@ proxy-groups:
   - AC Series - HK 04
   - C Series - HK 29
   - 将在 10-16 恢复 (California (美国) A09)
-  - California (美国) B10
-  - California (美国) B10 (IPv6)
-  - California (美国) E05
+  - 将在 11-03 恢复 (California (美国) B10)
+  - 将在 11-03 恢复 (California (美国) B10 (IPv6))
+  - California (美国) E05【故障】
   - California (美国) G06
   - California (美国) G06 (IPv6)
   - California (美国) H05
